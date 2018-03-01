@@ -1,0 +1,136 @@
+*{
+	font-family: "Microsoft Yahei";
+}
+.footer .foot-service{
+	border-bottom: 1px solid #dfdfdf;
+	background: #fff;
+}
+.foot-service ul{
+	width: 1150px;
+	margin: 0 auto;
+	padding: 20px 0 20px 50px;
+	overflow: hidden;
+}
+.foot-service ul li{
+	float: left;
+	width: 150px;
+	line-height: 20px;
+	font-size: 16px;
+	padding-left: 40px;
+	background: url(../img/get_icon.png) 0 -180px no-repeat;
+}
+.foot-service ul li em{
+	font-style: normal;
+	color: #333;
+}
+.foot-service ul li p{
+	color: #777;
+}
+.foot-service ul li.zp{
+	background-position: 0 -180px;
+}
+.foot-service ul li.th{
+	background-position: 0 -228px;
+}
+.foot-service ul li.by{
+	background-position: 0 -277px;
+}
+.foot-service ul li.dx{
+	background-position: 0 -327px;
+}
+.foot-service ul li.ys{
+	background-position: 0 -373px;
+}
+.foot-service ul li.fh{
+	background-position: 0 -425px;
+}
+.footer .foot-area{
+	width: 1200px;
+	position: relative;
+	margin: 0 auto;
+}
+.foot-cont{
+	padding: 20px 0 20px 50px;
+}
+.foot-contact,.foot-msg,.foot-focus{
+	float: left;
+}
+.foot-cont .foot-contact{
+	width: 240px;
+}
+.foot-cont .foot-msg{
+	padding-left: 40px;
+}
+.foot-cont .foot-focus{
+	width: 260px;
+}
+.foot-contact .ctc-icon{
+	float: left;
+	width: 16px;
+	height: 16px;
+	margin-top: 10px;
+	background: url(../img/get_icon.png) 0 0 no-repeat;
+}
+.foot-contact .ctc-tel{
+	margin-left: 30px;
+}
+.foot-contact .ctc-tel p{
+	font-size: 14px;
+	padding: 5px 0;
+	color: #8a8a8a;
+}
+.foot-contact .ctc-tel p>strong{
+	font-size: 16px;
+	color: #555;
+}
+.foot-msg{
+	float: left;
+	padding-left: 40px;
+}
+.foot-msg dl{
+	float: left;
+	margin-right: 50px;
+	width: 120px;
+}
+.foot-msg dl dt{
+	line-height: 40px;
+	font-size: 14px;
+	color: #555;
+	font-weight: bold;
+}
+.foot-msg dl dd a{
+	display: block;
+	height: 22px;
+	line-height: 22px;
+	color: #666;
+}
+.foot-nav{
+	position: absolute;
+	top: 200px;
+	left: 267px;
+}
+.foot-nav ul{
+	display: inline-block;
+}
+.foot-nav ul li{
+	float: left;
+	color: #999;
+	border-right: 1px solid #666;
+}
+.foot-nav ul li a{
+    padding: 0 15px;
+}
+.foot-copyright{
+	padding: 20px 0;
+	color: #777;
+	position: relative;
+	top: 30px;
+	margin-left: 365px;
+	/*left: 270px;*/
+}
+.foot-copyright .beihao{
+	margin-left: 150px;
+}
+.foot-copyright img{
+	margin-left: 170px;
+}

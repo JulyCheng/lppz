@@ -1,0 +1,96 @@
+.header{
+	width: 100%;
+	height:800px;
+	position: relative;
+	z-index: 1;
+	background:url(../img/screenbg.jpg);
+}
+input{
+	outline:medium;
+	border:none;
+}
+.logo{
+	width: 180px;
+	height: 70px;
+	position: absolute;
+  top: 100px;
+  margin-left: 43%;
+  z-index: 2;
+  background: url(../img/signed_logo.png) no-repeat;
+}
+.regist{
+	z-index: 2;
+	border-radius: 10px;
+	width: 400px;
+	top: 200px;
+	left:35%;
+  right:35%;
+	position: absolute;
+	min-height: 350px;
+  background-color: #fff;
+}
+.regist form{
+
+	width: 400px;
+	margin:0 auto;
+}
+.item{
+	margin: 30px;
+	padding: 10px;
+	border-bottom: 1px solid gainsboro;
+	position: relative;
+	padding-left: 50px;
+}
+.item input{
+	font-size: 1.2em;
+	background: #FFFFFF;
+}
+.item-wrap:before{
+	content: "";
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	background: url(../imgs/icons_2.png);
+	position: absolute;
+	left: 10px;
+	top: 10px;
+}
+.phone-wrap:before{
+	background-position: -48px -8px;
+}
+.pwd-wrap:before{
+	background-position: 0 0;
+}
+
+#btn{
+	width: 50%;
+  margin-left: 25%;
+	height: 50px;
+	background: red;
+	color: white;
+	font-size: 1.8em;
+}
+
+.error-msg{
+	color: red;
+	display: none;
+	position: absolute;
+	top: 110%;
+	left: 20px;
+}
+.signed-link{
+	z-index: 2;
+	width: 140px;
+	margin: 40px auto;
+	border-radius: 15px;
+	background-color: #6e6060;
+	text-align: center;
+	font-size: 12px;
+	color:#fff;
+	padding: 4px 0;
+	text-shadow:1px 1px 1px rgba(0,0,0,.4);
+}
+.signed-link a{
+	color:#ffa800;
+	margin-left: 6px;
+}

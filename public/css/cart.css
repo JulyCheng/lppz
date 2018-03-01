@@ -1,0 +1,383 @@
+.fl,.floatL{
+	float:left;
+}
+.fr,.floatR{
+	float: right;
+}
+*{
+	font-family: "Microsoft YaHei";
+}
+a{
+    text-decoration: none;
+}
+.buyCar{
+	top: -50px;
+	position: relative;
+	float: right;
+	width: 40px;
+	height: 20px;
+	margin-right: 20px;
+}
+.buyCarLogo{
+	width: 20px;
+	height: 20px;
+	background: url(../imgs/icons.png);
+}
+.buyCarLogo{
+	background-position: -215px -65px;
+}
+#buyNum {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: red;
+    text-align: center;
+    display: block;
+    background-position: -265px -65px
+}
+.slider{
+	/* z-index: 100; */
+	width: 94%;
+	height: 380px;
+	top: 0;
+	display: block;
+	margin-left: 3%;
+	position: relative;
+	overflow: hidden; 
+}
+.slider .current{
+	background-color: red!important;
+}
+.shiwu .guobao{
+	z-index: 100;
+	top: 300px;
+    width: 100%;
+    height:auto;
+    margin-top:-10px;
+}
+.guobao .title{
+   display: block;
+   width: 60%;
+   margin:0 auto;
+}
+.shiwu .guobao .guobaosec{
+	width: 86%;
+	margin-left: 7%;
+	height: auto;
+	padding-bottom:10px;
+}
+.guobao .guobaosec .item{
+	width:23%;
+	height: 26.6%;
+	margin:10px 24px 0 0;
+	background:#fff;
+}
+.guobao .guobaosec .item:last-child{
+	margin-right: 0;
+}
+.guobao .guobaosec .item:hover>.foodCart .all{
+	margin-top: -25px;
+}
+
+.guobao .guobaosec .item img{
+	width:100%;
+	height:230px;
+}
+.guobao .guobaosec .item .foodCart{
+	width: 100%;
+	margin-top: 7px 0 7px 0;
+}
+.guobao .guobaosec .item .show{
+	width: 100%;
+	height: 75px;
+	overflow: hidden;
+}
+.guobao .guobaosec .item .show .all{
+	margin-top: 0;
+	width: 100%;
+	height: 100px;
+	font-size: 14px;
+	transition: margin-top .3s;
+}
+.guobao .guobaosec .item .show .all .price{
+  color: #f83e09;
+}
+.guobao .guobaosec .item .show .all>div{
+	width: 100%;
+	height: 20px;
+	margin-top: 5px;
+	line-height: 20px;
+	text-align: center;
+}
+#addCartBtn{
+	background-color: #f83e09;
+	width: 100px;
+	border-radius: 4px;
+	margin: 5px auto 0;
+}
+#addCartBtn span{
+	color:#fff;
+}
+.footer{
+	width: 100%;
+	position: absolute;
+	height: 500px;
+	top: 1200px;
+	margin-top: 20px;
+	background: #f5f5f5;
+}
+
+/*加入购物车*/
+.addBuyCar {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(1, 1, 1, .1);
+}
+.addBuyCarOver,
+.addBuyCarShow {
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.addBuyCarShow {
+	  position: fixed;
+	  z-index: 300;
+    top: 50%;
+    width: 450px;
+    height: auto;
+    background: #fff;
+}
+.addBuyCar .buyCarHeader {
+    position: relative;
+    width: 426px;
+    height: 44px;
+    border-bottom: 1px solid #e4dbcd;
+    padding-left: 24px;
+}
+.addBuyCarShow .picture {
+    position: relative;
+    width: 200px;
+    height: auto;
+    margin: 10px auto 0;
+}
+.addBuyCarShow .picture img {
+    width: 100%;
+}
+.addBuyCar h3 {
+    line-height: 44px;
+    font-size: 14px;
+}
+.addBuyCar .buyCarHeader a {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    width: 40px;
+    height: 40px;
+    background: url(../imgs/icons.png) -5px -155px;
+}
+.addBuyCarOver,
+.buyCarPage {
+    display: none;
+    position: fixed;
+}
+.addBuyCar .middle {
+    width: 402px;
+    height: 27px;
+    padding: 24px 0;
+    margin: 0 24px;
+    border-bottom: 1px solid #e4dbcd;
+}
+.addBuyCarShow .middle .main {
+    width: 402px;
+}
+.addBuyCarShow .middle .price {
+    color: #ff4001;
+}
+.addBuyCarShow .middle .price #price,
+.addBuyCarShow .middle .title h2 {
+    height: 27px;
+    line-height: 27px;
+    font-size: 18px;
+}
+.addBuyCarShow .middle .title h2 {
+    width: 302px;
+    word-break: keep-all;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.addBuyCar .buyCarFooter {
+    text-align: center;
+    width: 406px;
+    height: 56px;
+    padding: 22px;
+    background: #fff;
+}
+.addBuyCar .buyCarFooter a {
+    position: absolute;
+    text-decoration: none;
+    width: 192px;
+    height: 56px;
+    line-height: 56px;
+    font-size: 14px;
+    margin-left:-93px;
+    background: #ff4001;
+    color: #fff;
+}
+.addBuyCarOver {
+    top: 50%;
+    width: 450px;
+    height: 200px;
+    background: #fff;
+}
+.addBuyCarOver .middle h2 {
+    height: 27px;
+    line-height: 27px;
+    font-size: 16px;
+    text-align: center;
+}
+/*购物车页面*/
+.buyCarPage {
+    top: 0;
+    left: 0;
+    z-index: 200;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(1, 1, 1, .1);
+}
+.buyCarPage .showSection {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 580px;
+    background-color: #fff;
+}
+.buyCarPage .tipTitle {
+    position: relative;
+    width: 776px;
+    height: 44px;
+    border-bottom: 1px solid #e4dbcd;
+    padding-left: 24px;
+}
+.buyCarPage .tipTitle h3 {
+    height: 100%;
+    line-height: 44px;
+    font-size: 18px;
+}
+.buyCarPage .tipTitle a {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    width: 40px;
+    height: 40px;
+    background: url(../imgs/icons.png) -5px -155px;
+}
+.buyCarPage .buyCarMainSection {
+    width: 700px;
+    height: 455px;
+    margin: 10px auto;
+    overflow-y: auto;
+}
+.buyCarPage .goodList {
+    width: 100%;
+    height: 144px;
+    padding: 24px 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+.buyCarPage .selectState {
+    width: 70px;
+    height: 100%;
+}
+.buyCarPage .selectState i {
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin: 62px auto;
+    background: url(../imgs/icons.png) -265px -115px;
+    cursor: pointer;
+}
+.buyCarPage .selectState i:hover{
+	background-color: #ff4001;
+}
+.goodImg {
+    width: 150px;
+    height: 100%;
+}
+.goodImg img {
+    width: 150px;
+    margin-top: 14px;
+}
+.goodInfo {
+    width: 210px;
+    height: 30px;
+    padding: 57px 0;
+    margin-left: 20px;
+    font-size: 14px;
+}
+.goodInfo .goodName {
+    height: 30px;
+    line-height: 30px;
+}
+.buyInfo {
+    width: 200px;
+    height: 100%;
+}
+.buyInfo .goodPrice {
+    text-align: right;
+    color: #ff4001;
+    margin-right: 10px;
+}
+.buyInfo .goodNum {
+    margin-top: 120px;
+    height: 24px;
+    line-height: 24px;
+}
+.buyInfo .goodNum a {
+    width: 50px;
+    height: 24px;
+    background: url(../imgs/icons.png);
+}
+.buyInfo .goodNum a:first-child {
+    background-position: -150px -113px;
+}
+.buyInfo .goodNum a:last-child {
+    background-position: -100px -113px;
+}
+.buyInfo .goodNum span {
+    display: inline-block;
+    height: 24px;
+    width: 50px;
+    text-align: center;
+}
+.settle{
+	width: 700px;
+	height: 49px;
+	padding: 5px 50px;
+	border-top: 1px solid #e4dbcd;
+}
+.totalNum, .totalPrice{
+	width: 200px;
+	height: 30px;
+	line-height: 30px;
+	margin-top: 10px;
+}
+.totalNum span, .totalPrice span{
+	color: #ff0000;
+}
+.settleBtn{
+	width: 150px;
+	height: 40px;
+	margin: 5px 10px 0 0;
+	border-radius: 5px;
+	background-color: #ff0000;
+}
+.settleBtn a{
+	width: 100%;
+	height: 100%;
+	line-height: 40px;
+	text-align: center;
+	color: #fff;
+}

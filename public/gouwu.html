@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title> 详情 </title>
+	
+<link rel="shortcut icon" href="imgs/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="css/header.css">
+<link rel="stylesheet" href="css/toolbar.css">
+<link rel="stylesheet" href="css/detail.css">
+<link rel="stylesheet" href="css/weibu.css"> 
+</head>
+<body>
+	
+<div class="toolbar">
+    <div class="toolbar-cont wide">
+        <ul class="fl clearfix">
+            <li id="headerUsername" class="headerUsername none">欢迎来到良品铺子官方商城!</li>
+            <li id="headerLogin" class="headerLogin none">
+                <a href="login.html" class="login" style="color:#ed4545">[登录]</a>
+            </li>
+            <li id="headerRegister" class="headerRegister none">
+                <a href="regist.html" class="register" style="color:#ed4545">[注册]</a>
+            </li>
+            <li id="headerLogout" class="headerLogout none" style="display: none;">
+                <a href="" class="logout" style="color:#ed4545">[退出]</a>
+            </li>
+            <li class="none">
+                <a href="https://login.lppz.com/alipayapi" class="alipay">支付宝快捷登录</a>
+            </li>
+            <li class="none">
+                <a href="https://graph.qq.com/oauth2.0/authorize?response_type=code&client_id=101096899&redirect_uri=http://www.lppz.com/index.jsp?client_name=qq&scope="
+                    class="qq">QQ</a>
+            </li>
+            <li class="none">
+                <a href="https://api.weibo.com/oauth2/authorize?client_id=4151902230&response_type=code&redirect_uri=http://www.lppz.com/index.jsp?client_name=sina&scope="
+                    class="weibo">微博登录</a>
+            </li>
+        </ul>
+        <ul class="fr clearfix">
+            <li class="thover">
+                <div class="top-user-info">
+                    <a class="my-lppz drop-title">
+                        我的良品
+                        <i class="arrow"></i>
+                    </a>
+                    <div class="my-lppz-layer">
+                        <div class="drop-spacer"></div>
+                        <div class="user-info">
+                            <div class="m-pic">
+                                <img src="img/touxiang.png" alt="" id="touxiangImg" />
+                            </div>
+                            <div class="m-name" id="divlogin" style="display: none;">
+                                <a href="" class="nick"></a>
+                                <a href="" class="level"></a>
+                            </div>
+                            <div class="m-name" id="divnologin">
+                                <a href="">您好，请登录</a>
+                            </div>
+                        </div>
+                        <div class="menu-list">
+                            <div class="m-nav">
+                                <div class="item">
+                                    <a href="" target="_blank">我的订单</a>
+                                </div>
+                                <div class="item">
+                                    <a href="" target="_blank">我的关注</a>
+                                </div>
+                                <div class="item">
+                                    <a href="" target="_blank">我的优惠券</a>
+                                </div>
+                                <div class="item">
+                                    <a href="" target="_blank">我的积分</a>
+                                </div>
+                            </div>
+                            <div class="m-btn">
+                                <div class="item">
+                                    <a href="" target="_blank">签到有好礼</a>
+                                </div>
+                                <div class="item">
+                                    <a href="" target="_blank">购物指南</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="view-list">
+                            <div class="vl-title">
+                                <h4>最近浏览</h4>
+                                <a href="" class="more">更多&nbsp;</a>
+                            </div>
+                            <ul class="vl-cont" id="ulHistory"></ul>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="tspacer">|</li>
+            <li class="thover">
+                <div class="top-follow">
+                    <a class="follow">关注良品</a>
+                    <div class="follow-on">
+                        <div class="fll-wb">
+                            <span>关注微博</span>
+                            <div class="gz">
+                                <div class="WB_widget WB_follow_ex" style="width: 136px;height: 24px;overflow: hidden;">
+                                    <a href="" class="follow_btn status_followed">
+                                        <cite class="follow_btn_inner">
+                                            <u class="WB_ico_logo"></u>
+                                            <cite class="follow_text">新动态</cite>
+                                        </cite>
+                                    </a>
+                                    <cite class="follow_data">
+                                        <a title="62.5万  粉丝" href="" class="data_link">62.5万</a>
+                                        <cite class="data_arrow"></cite>
+                                    </cite>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fll-wx">
+                            <div class="qr-code">
+                                <img src="img/dz_qrcode.jpg" alt="" />
+                            </div>
+                            <p>
+                                微信扫一扫
+                                <br> 优惠随身带
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="tspacer">|</li>
+            <li>
+                <a class="tlink" href="" target="_blank">官方网站</a>
+            </li>
+            <li class="tspacer">|</li>
+            <li>
+                <span class="tel">
+                    全国订购热线：
+                    <em>400-1177-517</em>
+                </span>
+            </li>
+            <li>
+                <a href="#" class="serv">
+                    在线客服
+                    <i class="icon"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="header">
+    <div class="head-main wide clearfix">
+        <div class="logo">
+            <a href="/"></a>
+        </div>
+        <div class="hd-search">
+            <div class="hot-tag">
+                <span>热门搜索:</span>
+                <a href="">松子</a>
+                <a href="">牛肉</a>
+                <a href="">话梅</a>
+                <a href="">花生瓜子</a>
+                <a href="">核桃</a>
+                <a href="">开心果</a>
+            </div>
+            <div class="search-area">
+                <form action="" method="get" id="productSearchForm" target="_blank">
+                    <input type="text" name="keyword" id="keyword" value="商品关键字" onfocus="if(value==='商品关键字'){value=''}" onblur="if(value===''){value='商品关键字'}"
+                    />
+                    <input type="submit" value="" class="ser-btn" />
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content-detail">
+    <div class="detail-img">
+        <div class="dimg1">
+            <div style="display:block">
+                <img src="./imgs/Bmang1.jpg" alt="">
+            </div>
+            <div>
+                <img src="./imgs/Bmang2.jpg" alt="">
+            </div>
+            <div>
+                <img src="./imgs/Bmang3.jpg" alt="">
+            </div>
+            <div>
+                <img src="./imgs/Bmang4.jpg" alt="">
+            </div>
+            <div>
+                <img class="pic" src="./imgs/Bmang5.jpg" alt="">
+            </div>
+        </div>
+        <ul class="dimg2">
+            <li>
+                <img src="./imgs/Bmang1.jpg" alt="">
+            </li>
+            <li>
+                <img src="./imgs/Bmang2.jpg" alt="">
+            </li>
+            <li>
+                <img src="./imgs/Bmang3.jpg" alt="">
+            </li>
+            <li>
+                <img src="./imgs/Bmang4.jpg" alt="">
+            </li>
+            <li>
+                <img src="./imgs/Bmang5.jpg" alt="">
+            </li>
+        </ul>
+    </div>
+    <div class="detail-buy">
+        <p class="detail-title">芒果干蜜饯果脯</p>
+        <div class="detail-price">
+            <dl class="cuxiao">
+                <dt>促销价</dt>
+                <dd>
+                    <div class="price">
+                        <span class="rmb">￥</span>
+                        <span class="Price">29.9</span>
+                        <em class="type">爆款促销</em>
+                    </div>
+                </dd>
+            </dl>
+            <dl class="panel">
+                <div class="promotion">
+                    <dt class="huodong">本店活动</dt>
+                    <dd>满88元，包邮</dd>
+                </div>
+            </dl>
+            <div class="baoyou">
+                <span class="tip">不包邮地区：</span>
+                <span class="area">台湾;香港;澳门;海外;新疆</span>
+            </div>
+        </div>
+        <div class="meta">
+            <dl>
+                <span class="delivery">运费</span>
+                <span class="route">湖北武汉至 黄山 快递: 0.00</span>
+            </dl>
+        </div>
+        <ul>
+            <li>月销量
+                <i>21392</i>
+            </li>
+            <li>累计评价
+                <i>945751</i>
+            </li>
+            <li>积分
+                <i>13</i>
+            </li>
+        </ul>
+        <div class="jiagou">
+            <div class="kouwei">食品口味
+                <div class="desc">原味108g×3袋</div>
+            </div>
+            <div class="count">数量
+                <input class="num" placeholder="1" value="1"></input>
+                <div class="add">︿</div>
+                <div class="reduce">﹀</div>
+            </div>
+            <div class="gou">
+                <div class="instant">立即购买</div>
+                <div class="buycart">
+                    <a href="shop.html">加入购物车</a>
+                </div>
+            </div>
+        </div>
+        <div class="req">
+                <dl>
+                    <span class="promise">服务承诺</span>
+                    <span class="service">破损包退 正品保证 急速退款 赠运费险 七天无理由退换货</span>
+                </dl>
+            </div>
+    </div>
+</div>
+<!-- 右侧边导航栏 -->
+<div class="rtoolbar">
+    <ul>
+        <li>
+            <div class="icon">
+                <a href="#">
+                    <i class="tab-ico member"></i>
+                    <em class="tab-text">良品会员</em>
+                </a>
+            </div>
+        </li>
+        <li>
+            <div class="icon1">
+                <a href="shop.html">
+                    <i class="tab-ico cart"></i>
+                    <span class="carttext">购物车</span>
+                    <i class="cart-num"></i>
+                </a>
+            </div>
+        </li>
+        <li>
+            <div class="icon">
+                <a href="#">
+                    <i class="tab-ico focus"></i>
+                    <em class="tab-text">我的关注</em>
+                </a>
+            </div>
+        </li>
+        <li>
+            <div class="icon">
+                <a href="#">
+                    <i class="tab-ico qrcode"></i>
+                    <p class="qrdesc"></p>
+                </a>
+            </div>
+        </li>
+        <li>
+            <div class="icon">
+                <a href="javascript:window.scrollTo(0,0);">
+                    <i class="tab-ico tabtop"></i>
+                    <em class="tab-text">回到顶部</em>
+                </a>
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="goods-detail"> 
+    <div class="tooldetail">
+        <div class="detailList">商品详情</div>
+        <div class="goodsReviews">累计评价 945233</div>
+    </div>
+    <div class="details">
+        <p class="qs">商品具有生产许可证编号，符合食品质量安全准入标准。</p>
+        <div class="canshu Detail">
+            <p class="logo">品牌名称：良品铺子</p>
+            <p class="can">产品参数：</p>
+            <ul>
+                <li>生产许可证编号：SC11833018501652</li>
+                <li>产品标准号：GB/T 10782</li>
+                <li>厂名：杭州临安良品铺子食品有限公司</li>
+                <li>厂址：浙江省杭州市临安市龙岗镇</li>
+                <li>厂家联系方式：400-1177-517</li>
+                <li>配料表：鲜芒果、白砂糖、玉米糖浆</li>
+                <li>储藏方法：请置于阴凉干燥处保存</li>
+                <li>保质期：240 天</li>
+                <li>净含量: 324g</li>
+                <li>包装方式: 包装</li>
+                <li>食品口味: 原味 108gx3袋</li>
+                <li>是否含糖: 含糖</li>
+                <li>产地: 中国大陆</li>
+                <li>省份: 湖北省</li>
+                <li>城市：武汉</li>
+            </ul>
+        </div>
+        <div class="date">生产日期: 2017-11-28 至 2018-02-06</div>
+        <div class="parameter Detail">
+            <img src="./imgs/buywl.jpg" alt="">
+            <img src="./imgs/buyleader.png" alt="">
+        </div>
+        <div class="baozhang Detail"></div>
+        <script src="./js/module.js"></script>
+        <script src="./js/slider1.js"></script>
+        <script src="./js/config2.js"></script>
+        <div class="showing Detail">
+            <img src="./imgs/mang1.jpg" alt="">
+            <img src="./imgs/mang2.jpg" alt="">
+            <img src="./imgs/mang3.jpg" alt="">
+            <img src="./imgs/mang4.jpg" alt="">
+            <img src="./imgs/mang5.jpg" alt="">
+        </div>
+    </div>
+</div>
+<dl class="detail-sidebar" id="side">
+    <dd class="idsItem">
+        <a class="cur" href="javascript:;">商品参数</a>
+    </dd>
+    <dd class="idsItem">
+        <a href="javascript:;">物流快递</a>
+    </dd>
+    <dd class="idsItem">
+        <a href="javascript:;">品质保障</a>
+    </dd>
+    <dd class="idsItem">
+        <a href="javascript:;">商品展示</a>
+    </dd>
+</dl>
+<script src="./js/jquery-3.2.1.min.js"></script>
+<script src="./js/detailSide.js"></script>
+<script src="./js/gouwu.js" type="text/javascript"></script> 
+</body>
+</html>

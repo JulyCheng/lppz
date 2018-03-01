@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>注册</title>
+    <link rel="shortcut icon" href="imgs/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/regist.css" />
+</head>
+
+<body>
+    <div class="header"></div>
+    <div class="logo"></div>
+    <div class="regist">
+        <form action="" onsubmit=regist()>
+            <div class="item item-wrap phone-wrap">
+                <input type="text" name="phone" id="phone" value="" data-validate="false" placeholder="手机号码" />
+                <span class="error-msg">手机号码不合法或已存在</span>
+            </div>
+            <div class="item item-wrap pwd-wrap">
+                <input type="password" name="pwd" id="pwd" value="" placeholder="6-20位密码" data-validate="false" />
+                <span class="error-msg">密码不合法</span>
+            </div>
+            <div class="item">
+                <input type="password" name="repwd" id="repwd" value="" placeholder="确认密码" />
+                <span class="error-msg">确认密码和密码一致</span>
+            </div>
+            <button type="submit" id="btn">立即注册</button>
+        </form>
+        <div class="signed-link">已经有账号？
+                <a href="login.html">马上登录</a>
+        </div>
+    </div>
+    <script src="./js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="./js/regist.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+        function regist(e) {
+            e = e || event;
+            e.preventDefault();
+            let phone = document.getElementById('phone').value;
+            let pwd = document.getElementById('pwd').value;
+            let data = {
+                phone,
+                pwd
+            }
+            fetch(
+                "http://localhost:3001/users/regist", 
+                {
+                    method: 'post',
+                    body: JSON.stringify(data)
+                })
+                    .then(resp => resp.json())
+                    .then(data=>{
+                        console.log(data.id);
+                        if(data.id){
+                            let form=document.getElementsByTagName('form')[0];
+                            form.reset();
+                        }
+                    })
+                    .catch(e => console.log(e))
+            
+        }
+    </script>
+</body>
+
+</html>
