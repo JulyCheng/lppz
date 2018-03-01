@@ -88,10 +88,13 @@ Slider.prototype = {
         }
         this.timer = setInterval(function () {
             that.index++;
-            if (that.engine) {
-                that.engine = null;
-            }
-            that.engine = animate(that.imgsArea, {
+            // if (that.engine) {
+            //     that.engine = null;
+            // }
+            // that.engine = animate(that.imgsArea, {
+            //     left: -(that.index + 1) * that.imgBox.offsetWidth
+            // })
+            animate(that.imgsArea, {
                 left: -(that.index + 1) * that.imgBox.offsetWidth
             })
             if (that.imgsArea.style.left == -(that.len + 1) * that.imgBox.offsetWidth + 'px') {

@@ -52,7 +52,7 @@ $(document).ready(function () {
 			this.n = 0;
 			this.offsetTop = [];
 			this.scrolltype = true;
-			this.al=document.getElementsByTagName('idsItem');
+			this.al=document.getElementsByTagName('dd');
 			this.review = function () {
 				$('.detail-sidebar dd a').eq(this.n).addClass('cur').parent().siblings().children().removeClass('cur');
 			};
@@ -74,14 +74,14 @@ $(document).ready(function () {
 					$('#side').css({'top':736,'position':'absolute'});
 				}
 			});
-			$('#side .idsItem').delegate('a', 'click', function (e) {//   点击导航定位页面内容
-				self.n = $(this).index('#side .idsItem a');
+			$('#side dd').delegate('a', 'click', function (e) {//   点击导航定位页面内容
+				self.n = $(this).index('#side dd a');
 				console.log(self.n);
 				self.scrolltype = false;
 				self.review();
 				var t = self.offsetTop[self.n]-60;
 				console.log(t);
-				$(this).addClass('itemSelected').show();
+				// $(this).addClass('itemSelected').show();
 				$('html,body').animate({ scrollTop: t }, 600, function () {//   滚动条滚动 页面不同内容的offsetTop值实现按钮对应效果
 					self.scrolltype = true;
 					$(self.n).addClass('cur').parent().siblings().children().removeClass('cur');

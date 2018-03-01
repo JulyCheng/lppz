@@ -3,13 +3,16 @@ function Tabs() {
     let dimg = document.querySelector('.dimg1');
     this.aDiv = dimg.getElementsByTagName('div');
     this.aLi = detail.getElementsByTagName('li');
+    let dside = document.querySelector(".detail-sidebar");
+    this.item = dside.getElementsByTagName("dd");
     this.init();
+    this.show();
 }
 
-Tabs.prototype={
-    constructor:Tabs,
-    init:function(){
-        var that=this;
+Tabs.prototype = {
+    constructor: Tabs,
+    init: function () {
+        var that = this;
         for (var i = 0; i < this.aLi.length; i++) {
             this.aLi[i].index = i;
             this.aLi[i].onmouseover = function () {
@@ -19,6 +22,18 @@ Tabs.prototype={
                 that.aDiv[this.index].style.display = 'block';
             }
         }
+    },
+    show: function () {
+        var that = this;
+        for (let i = 0; i < this.item.length; i++) {
+            this.item[i].index = i;
+            this.item[i].onclick = function () {
+                for (var j = 0; j < that.item.length; j++) {
+                    that.item[j].className = '';
+                }
+                that.item[this.index].className = 'itemSelected';
+            }
+        }
     }
 }
-var aa=new Tabs();
+var aa = new Tabs();
