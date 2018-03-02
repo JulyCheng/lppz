@@ -42,8 +42,9 @@ Shangpin.prototype = {
 							  var id=data.detail.pid;
 							  console.log(data.detail.pid)
 								console.log(data.detail.liang);
-								str+="<a href='gouwu.html?shopid="+id+"'/>"; 
-								this.innerHTML+=str;
+								// str+="<a href='gouwu.html?shopid="+id+"'/>"; 
+								// this.innerHTML+=str;
+								window.location.href="gouwu.html?shopid="+id;
 						})
 						.catch(e => console.log(e))
 			// fetch(

@@ -19,7 +19,7 @@ $(document).ready(function(){
 			for(var i=0;i<$('.shangpin .cont').length;i++){
 				this.offsetTop.push($('.shangpin .cont').eq(i).offset().top);
                 // console.log(this.offsetTop);
-			};
+			}
 			navObj.bindE();
 		};
 		navObj.bindE=function(){//滚动条滚动改变导航元素效果
