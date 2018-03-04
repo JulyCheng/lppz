@@ -26,27 +26,90 @@ Shangpin.prototype = {
 		var that=this;
 		this.div.onclick=function(){
 			let pid=that.num[i].pid;
-			let liang=that.num[i].liang;
-			let data={
-				pid,
-				liang,
-			}
-			let str='';
-			fetch(
-				`http://localhost:3001/shop/show?pid=${pid}`, 
-				{ 
-						method: 'get' ,
-				})
-						.then(resp => resp.json())
-						.then(data=>{
-							  var id=data.detail.pid;
-							  console.log(data.detail.pid)
-								console.log(data.detail.liang);
-								// str+="<a href='gouwu.html?shopid="+id+"'/>"; 
-								// this.innerHTML+=str;
-								window.location.href="gouwu.html?shopid="+id;
-						})
-						.catch(e => console.log(e))
+			// let liang=that.num[i].liang;
+			// let price=that.num[i].price;
+			// let imgIcon1=that.num[i].imgIcon1;
+			// let imgIcon2=that.num[i].imgIcon2;
+			// let imgIcon3=that.num[i].imgIcon3;
+			// let imgIcon4=that.num[i].imgIcon4;
+			// let imgIcon5=that.num[i].imgIcon5;
+			// let imgShow1=that.num[i].imgShow1;
+			// let imgShow2=that.num[i].imgShow2;
+			// let imgShow3=that.num[i].imgShow3;
+			// let imgShow4=that.num[i].imgShow4;
+			// let imgShow5=that.num[i].imgShow5;
+			// let msales=that.num[i].msales;
+			// let pingjia=that.num[i].pingjia;
+			// let foodtaste=that.num[i].foodtaste;
+			// let bianhao=that.num[i].bianhao;
+			// let biaozhunhao=that.num[i].baiozhunhao;
+			// let factoryName=that.num[i].factoryName;
+			// let factoryAddr=that.num[i].factoryAddr;
+			// let factoryPhone=that.num[i].factoryPhone;
+			// let peiliao=that.num[i].peiliao;
+			// let saveway=that.num[i].saveway;
+			// let baozhiqi=that.num[i].baizhiqi;
+			// let tianjiaji=that.num[i].tianjiaji;
+			// let weight=that.num[i].weight;
+			// let baoway=that.num[i].baoway;
+			// let kinds=that.num[i].kinds;
+			// let brand=that.num[i].brand;
+			// let series=that.num[i].series;
+			// let sugar=that.num[i].sugar;
+			// let birthland=that.num[i].birthland;
+			// let province=that.num[i].province;
+			// let city=that.num[i].city;
+			// let data={
+			// 	pid,
+			// 	liang,
+			// 	price,
+			// 	imgIcon1,
+			// 	imgIcon2,
+			// 	imgIcon3,
+			// 	imgIcon4,
+			// 	imgIcon5,
+			// 	imgShow1,
+			// 	imgShow2,
+			// 	imgShow3,
+			// 	imgShow4,
+			// 	imgShow5,
+			// 	msales,
+			// 	pingjia,
+			// 	foodtaste,
+			// 	bianhao,
+			// 	biaozhunhao,
+			// 	factoryName,
+			// 	factoryAddr,
+			// 	factoryPhone,
+			// 	peiliao,
+			// 	saveway,
+			// 	baozhiqi,
+			// 	tianjiaji,
+			// 	weight,
+			// 	baoway,
+			// 	kinds,
+			// 	brand,
+			// 	series,
+			// 	sugar,
+			// 	birthland,
+			// 	province,
+			// 	city
+			// }
+			// fetch(
+			// 	`http://localhost:3001/shop/show?pid=${pid}`, 
+			// 	{ 
+			// 			method: 'get' ,
+			// 	})
+			// 			.then(resp => resp.json())
+			// 			.then(data=>{
+			// 				  var id=data.detail.pid;
+			// 				  console.log(data.detail.pid)
+			// 					console.log(data.detail.liang);
+			// 					// str+="<a href='gouwu.html?shopid="+id+"'/>"; 
+			// 					// this.innerHTML+=str;
+			// 					window.location.href="gouwu.html?shopid="+id;
+			// 			})
+			// 			.catch(e => console.log(e))
 			// fetch(
 			// 	"http://localhost:3001/shop/add",
 			// 	{
@@ -58,6 +121,7 @@ Shangpin.prototype = {
 			// 		console.log(data)
 			// 	})
 			// 	.catch(e=>console.log(e))
+			window.location.href="gouwu.html?shopid="+pid;
 		}
 	},
 	createImg:function(i){

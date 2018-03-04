@@ -29,6 +29,28 @@ $(document).ready(function () {
 			p.value = 1;
 		}
 	})
+	//评价。商品详情块显示与隐藏
+	let detailList=$(".detailList");
+	let goodsReviews=$('.goodsReviews');
+	let details=$('.details');
+	let rate=$(".rate");
+	let detail_sidebar=$('.detail-sidebar');
+	rate.hide();
+    detailList.click(function(){
+		$(this).css({'border-top':'2px solid #FF0036'});
+		goodsReviews.css({"border-top":0});
+		rate.hide();
+		details.show();
+		detail_sidebar.show();
+	});
+	goodsReviews.click(function(){
+		$(this).css({'border-top':'2px solid #FF0036'});
+		detailList.css({"border-top":0})
+		rate.show();
+		details.hide();
+		detail_sidebar.hide();
+	})
+
 
 	$('.buycart').click(function () {
 		let parent = $(this).parent().parent().parent('.detail-buy');

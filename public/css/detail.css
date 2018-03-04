@@ -246,6 +246,7 @@
     border: 1px solid grey;
     font-weight: 600; }
     .goods-detail .tooldetail .detailList {
+      cursor: pointer;
       border-top: 2px solid #FF0036;
       width: 90px;
       border-right: 1px solid grey;
@@ -253,11 +254,13 @@
       line-height: 50px;
       float: left; }
     .goods-detail .tooldetail .goodsReviews {
+      cursor: pointer;
       width: 699px;
       line-height: 50px;
       float: left; }
   .goods-detail .details {
-    display: block; }
+    display: block;
+    position: relative; }
     .goods-detail .details .qs {
       padding: 10px 0; }
     .goods-detail .details .canshu {
@@ -306,6 +309,132 @@
       width: 790px;
       height: 583px;
       padding: 15px 0; }
+  .goods-detail .rate {
+    width: 790px;
+    display: block;
+    position: relative; }
+    .goods-detail .rate .rate-header {
+      padding: 10px 0;
+      border: 1px solid #c8c8c8; }
+      .goods-detail .rate .rate-header .rate-tag-box, .goods-detail .rate .rate-header .rate-label, .goods-detail .rate .rate-header .rate-list, .goods-detail .rate .rate-header .rate-tag-toggle {
+        display: inline-block;
+        vertical-align: top; }
+      .goods-detail .rate .rate-header .rate-score {
+        width: 75px;
+        padding: 0 20px;
+        float: left;
+        border: 1px dotted #ddd;
+        text-align: center; }
+        .goods-detail .rate .rate-header .rate-score h4 {
+          color: #404040;
+          font-size: 12px;
+          font-weight: 100; }
+        .goods-detail .rate .rate-header .rate-score strong {
+          color: #f60;
+          font-family: arial;
+          font-size: 32px;
+          line-height: 32px;
+          margin: 0 2px; }
+      .goods-detail .rate .rate-header .rate-tag-box {
+        width: 630px; }
+        .goods-detail .rate .rate-header .rate-tag-box .rate-label {
+          color: #ccc;
+          width: 16px;
+          height: 61px;
+          margin-top: 4px;
+          font-size: 11px;
+          line-height: 12px;
+          padding: 0 12px 0 25px;
+          background: url(../imgs/posi.png) right center no-repeat; }
+        .goods-detail .rate .rate-header .rate-tag-box .rate-list {
+          position: relative;
+          width: 555px;
+          overflow: hidden; }
+          .goods-detail .rate .rate-header .rate-tag-box .rate-list .rate-inner span {
+            float: left;
+            height: 22px;
+            margin: 7px 6px 6px; }
+          .goods-detail .rate .rate-header .rate-tag-box .rate-list .rate-inner .tag-posi a {
+            color: #ff0036;
+            border-color: #ffd7dd; }
+          .goods-detail .rate .rate-header .rate-tag-box .rate-list .rate-inner .tag-neg a {
+            color: green;
+            border-color: #ffd7dd; }
+          .goods-detail .rate .rate-header .rate-tag-box .rate-list .rate-inner a {
+            position: relative;
+            float: left;
+            border-radius: 2px;
+            line-height: 18px;
+            padding: 1px 10px;
+            background: #fff;
+            box-shadow: 2px 2px 1px #f2f2f2;
+            border: 1px solid #d3f4f4;
+            white-space: nowrap; }
+    .goods-detail .rate .rate-toolbar {
+      width: 790px;
+      background: #EFEFEF;
+      height: 24px;
+      line-height: 24px;
+      padding: 5px 10px;
+      text-align: right; }
+      .goods-detail .rate .rate-toolbar .rate-filter {
+        float: left;
+        overflow: hidden;
+        padding-left: 2px; }
+        .goods-detail .rate .rate-toolbar .rate-filter input {
+          margin-right: 3px;
+          display: inline-block;
+          vertical-align: middle;
+          font-size: 100%; }
+        .goods-detail .rate .rate-toolbar .rate-filter label {
+          padding-right: 5px;
+          display: inline-block; }
+    .goods-detail .rate .rate-grid {
+      width: 100%; }
+      .goods-detail .rate .rate-grid table {
+        width: 100%;
+        table-layout: fixed;
+        border-collapse: collapse;
+        border-spacing: 0; }
+        .goods-detail .rate .rate-grid table tbody {
+          display: table-row-group;
+          vertical-align: middle;
+          border-color: inherit; }
+          .goods-detail .rate .rate-grid table tbody tr {
+            display: table-row;
+            vertical-align: inherit;
+            border-color: inherit; }
+            .goods-detail .rate .rate-grid table tbody tr td {
+              padding: 16px 7px;
+              border-bottom: 1px solid #e3e3e3; }
+            .goods-detail .rate .rate-grid table tbody tr .col-master {
+              width: 494px;
+              padding-right: 30px; }
+              .goods-detail .rate .rate-grid table tbody tr .col-master .rate-content {
+                color: #333;
+                word-wrap: break-word;
+                word-break: break-all;
+                line-height: 19px;
+                overflow: hidden; }
+              .goods-detail .rate .rate-grid table tbody tr .col-master .rate-date {
+                clear: both;
+                color: #ccc; }
+            .goods-detail .rate .rate-grid table tbody tr .col-meta {
+              width: 135px;
+              color: #999; }
+              .goods-detail .rate .rate-grid table tbody tr .col-meta .rate-sku {
+                margin-bottom: 3px; }
+                .goods-detail .rate .rate-grid table tbody tr .col-meta .rate-sku span {
+                  color: #666; }
+            .goods-detail .rate .rate-grid table tbody tr .col-author {
+              padding-right: 0; }
+              .goods-detail .rate .rate-grid table tbody tr .col-author .rate-user-info {
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+                width: 95px; }
+                .goods-detail .rate .rate-grid table tbody tr .col-author .rate-user-info span {
+                  color: #999; }
 
 .detail-sidebar {
   width: 100px;

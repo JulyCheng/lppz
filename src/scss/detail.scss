@@ -296,6 +296,7 @@
         border: 1px solid grey;    
         font-weight: 600;    
         .detailList{
+            cursor: pointer;
             border-top: 2px solid #FF0036;
             width: 90px;
             border-right: 1px solid grey;
@@ -304,6 +305,7 @@
             float: left;
         }
         .goodsReviews{
+            cursor: pointer;
             width: 699px;
             line-height: 50px;
             float: left;
@@ -311,6 +313,7 @@
     }
     .details{
         display: block;
+        position: relative;
         .qs{
             padding: 10px 0;
         }
@@ -369,6 +372,166 @@
             width: 790px;
             height: 583px;
             padding: 15px 0;
+        }
+    }
+    .rate{
+        width: 790px;
+        display: block;
+        position: relative;
+        .rate-header{
+            padding: 10px 0;
+            border: 1px solid #c8c8c8;
+            .rate-tag-box, .rate-label, .rate-list, .rate-tag-toggle {
+                display: inline-block;
+                vertical-align: top;
+            }
+            .rate-score{
+               width: 75px;
+               padding: 0 20px;
+               float: left;
+               border: 1px dotted #ddd;
+               text-align: center;
+               h4{
+                   color: #404040;
+                   font-size: 12px;
+                   font-weight: 100;
+               }
+               strong{
+                  color: #f60;
+                  font-family: arial;
+                  font-size: 32px;
+                  line-height: 32px;
+                  margin: 0 2px;
+               }
+            }
+            .rate-tag-box{
+                width: 630px;
+                .rate-label{
+                    color: #ccc;
+                    width: 16px;
+                    height: 61px;
+                    margin-top: 4px;
+                    font-size: 11px;
+                    line-height: 12px;
+                    padding: 0 12px 0 25px;
+                    background: url(../imgs/posi.png) right center no-repeat;
+                }
+                .rate-list{
+                    position: relative;
+                    width: 555px;
+                    overflow: hidden;
+                    .rate-inner{
+                        span{
+                            float: left;
+                            height: 22px;
+                            margin: 7px 6px 6px;
+                        }
+                        .tag-posi a{
+                            color: #ff0036;
+                            border-color: #ffd7dd;
+                        }
+                        .tag-neg a{
+                            color: green;
+                            border-color: #ffd7dd;
+                        }
+                        a{
+                            position: relative;
+                            float: left;
+                            border-radius: 2px;
+                            line-height: 18px;
+                            padding: 1px 10px;
+                            background: #fff;
+                            box-shadow: 2px 2px 1px #f2f2f2;
+                            border: 1px solid #d3f4f4;
+                            white-space: nowrap;
+                        }
+                    }
+                    
+                }
+            }
+        }
+        .rate-toolbar{
+            width: 790px;
+            background: #EFEFEF;
+            height: 24px;
+            line-height: 24px;
+            padding: 5px 10px;
+            text-align: right;
+            .rate-filter{
+                float: left;
+                overflow: hidden;
+                padding-left: 2px;
+                input{
+                    margin-right: 3px;
+                    display: inline-block;
+                    vertical-align: middle;
+                    font-size: 100%;
+                }
+                label{
+                    padding-right: 5px;
+                    display: inline-block;
+                }
+            }
+        }
+        .rate-grid{
+            width: 100%;
+            table{
+                width: 100%;
+                table-layout: fixed;
+                border-collapse: collapse;
+                border-spacing: 0;
+                tbody{
+                    display: table-row-group;
+                    vertical-align: middle;
+                    border-color: inherit;
+                    tr{
+                        display: table-row;
+                        vertical-align: inherit;
+                        border-color: inherit;
+                        td{
+                            padding: 16px 7px;
+                            border-bottom: 1px solid #e3e3e3;
+                        }
+                        .col-master{
+                            width: 494px;
+                            padding-right: 30px;
+                            .rate-content{
+                                color: #333;
+                                word-wrap: break-word;
+                                word-break: break-all;
+                                line-height: 19px;
+                                overflow: hidden;
+                            }
+                            .rate-date{
+                                clear: both;
+                                color: #ccc;
+                            }
+                        }
+                        .col-meta{
+                            width: 135px;
+                            color: #999;
+                            .rate-sku{
+                                margin-bottom: 3px;
+                                span{
+                                    color: #666;
+                                }
+                            }
+                        }
+                        .col-author{
+                            padding-right: 0;
+                            .rate-user-info{
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                                overflow: hidden;
+                                width: 95px;
+                                span{
+                                    color: #999;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
