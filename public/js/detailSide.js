@@ -60,14 +60,17 @@ $(document).ready(function () {
 		let price = parent.children('.detail-price').find('.Price').text();
 		let img = parent.prev('.detail-img').find('.pic').attr('src');
 		let val = $(this).parent().prev('.count').find('input')[0].value;
+		let shopid=window.location.search.split('=')[1];
+		let id=shopid+01;
+		console.log(id);
 		let cart = {
-			'id': 101,
+			'id': id,
 			'pic': img,
 			'value': val,
 			'tip': allTitle,
 			'price': price
 		};
-		localStorage.setItem('cartList', JSON.stringify(cart));
+		localStorage.setItem('cartList'+id, JSON.stringify(cart));
 		console.log(localStorage.getItem("cartList"));
 	})
 	var nav = (function (navObj) {

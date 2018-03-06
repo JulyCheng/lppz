@@ -39,7 +39,7 @@ function createCart() {
         var input2 = document.createElement('input');
         input2.className = "count-input";
         input2.type = "text";
-        input2.value ="1"
+        input2.value =len.value;
         var span2 = document.createElement('span');
         span2.className = "add";
         span2.innerText = "+";

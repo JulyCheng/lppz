@@ -1,0 +1,88 @@
+{% extends './layout.html' %} {% block title %}良品铺子官方商城-休闲零食网购首选（LPPZ.COM）- 品质保障、配送及时、放心服务、轻松购物!{% endblock %} {% block head
+%}
+<link rel="shortcut icon" href="imgs/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="css/header.css">
+<link rel="stylesheet" href="css/cart1.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/weibu.css"> {% endblock %} {% block content %} {% include "./header.html" %}
+<div class="header">
+    <div class="head-main wide clearfix">
+        <div class="logo">
+            <a href="/"></a>
+        </div>
+        <div class="hd-search">
+            <div class="hot-tag">
+                <span>热门搜索:</span>
+                <a href="">松子</a>
+                <a href="">牛肉</a>
+                <a href="">话梅</a>
+                <a href="">花生瓜子</a>
+                <a href="">核桃</a>
+                <a href="">开心果</a>
+            </div>
+            <div class="search-area">
+                <form action="" method="get" id="productSearchForm" target="_blank">
+                    <input type="text" name="keyword" id="keyword" value="商品关键字" onfocus="if(value==='商品关键字'){value=''}" onblur="if(value===''){value='商品关键字'}"
+                    />
+                    <input type="submit" value="" class="ser-btn" />
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="menu">
+        <div class="menu-main wide">
+            <ul class="menu-list">
+                <li>
+                    <a href="">上新尝鲜</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="cartbox">
+    <table id="cartTable">
+        <thead>
+            <tr>
+                <th>
+                    <label>
+                        <input class="check-all check" type="checkbox" />&nbsp;&nbsp;全选</label>
+                </th>
+                <th>商品</th>
+                <th>单价</th>
+                <th>数量</th>
+                <th>小计</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody class="tab"></tbody>
+    </table>
+    <div class="foot" id="foot">
+        <label class="fl select-all">
+            <input type="checkbox" class="check-all check" />&nbsp;&nbsp;全选</label>
+        <a class="fl delete" id="deleteAll" href="javascript:;">删除</a>
+        <div class="fr closing" onclick="getTotal();">结 算</div>
+        <input type="hidden" id="cartTotalPrice" />
+        <div class="fr total">合计：￥
+            <span id="priceTotal">0.00</span>
+        </div>
+        <div class="fr selected" id="selected">已选商品
+            <span id="selectedTotal">0</span>件
+            <span class="arrow up">︽</span>
+            <span class="arrow down">︾</span>
+        </div>
+        <div class="selected-view">
+            <div id="selectedViewList" class="clearfix">
+                <!-- <div>
+                        <img src="images/1.jpg">
+                        <span>取消选择</span>
+                    </div> -->
+            </div>
+            <span class="arrow">◆
+                <span>◆</span>
+            </span>
+        </div>
+    </div>
+</div>
+<script src="js/createTab.js"></script>
+<!-- <script src="js/cart.js"></script> -->
+<script src="js/cart1.js"></script> {% include "./weibu.html" %} {% endblock %}

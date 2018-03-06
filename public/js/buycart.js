@@ -33,6 +33,7 @@ $(function () {
 	let $buyNumShow = $("#buyNum");
 	let $totalPriceShow = $("#totalPrice");
 	let totalNum = localStorage.length;
+	console.log(totalNum);
 	if (totalNum) {
 		numShow();
 	} else {
@@ -93,6 +94,7 @@ $(function () {
 			let cartList = {
 				'id': dataname,
 				'pic': $picture,
+				'value':1,
 				'tip': $alltitle,
 				'price': $price
 			};

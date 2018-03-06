@@ -1,0 +1,390 @@
+{% extends './layout.html' %} {% block title %}购物车{% endblock %} {% block head %}
+<link rel="shortcut icon" href="imgs/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="css/header.css">
+<link rel="stylesheet" href="css/weibu.css">
+<link rel="stylesheet" href="css/cart.css"> {% endblock %} {% block content %} {% include "./header.html" %}
+<div class="header">
+    <div class="head-main wide clearfix">
+        <div class="logo">
+            <a href="/"></a>
+        </div>
+        <div class="hd-search">
+            <div class="hot-tag">
+                <span>热门搜索:</span>
+                <a href="">松子</a>
+                <a href="">牛肉</a>
+                <a href="">话梅</a>
+                <a href="">花生瓜子</a>
+                <a href="">核桃</a>
+                <a href="">开心果</a>
+            </div>
+            <div class="search-area">
+                <form action="" method="get" id="productSearchForm" target="_blank">
+                    <input type="text" name="keyword" id="keyword" value="商品关键字" onfocus="if(value==='商品关键字'){value=''}" onblur="if(value===''){value='商品关键字'}"
+                    />
+                    <input type="submit" value="" class="ser-btn" />
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="buyCar fr clearfix">
+        <span id="buyNum" class="fr" style="display:block"></span>
+        <a href="shop.html" class="buyCarLogo fr"></a>
+    </div>
+</div>
+<!-- 轮播图 -->
+<div class="slider"></div>
+<script src="js/module.js"></script>
+<script src="js/slider.js"></script>
+<script src="js/config1.js"></script>
+
+<!-- 商品界面  果宝  食肉-->
+<div class="shiwu">
+    <div class="guobao" style="background-color: #272c32;">
+        <img src="imgs/guobao.png" alt="" class="title">
+        <div class="guobaosec">
+            <div class="item fl" data-id="01">
+                <img src="imgs/guobao1.jpg" alt="">
+                <div class="foodCart">
+                    <div class="show">
+                        <div class="all">
+                            <div id="foodTitle" data-name="1">草莓脆</div>
+                            <div class="weight">20g × 4袋</div>
+                            <div class="price">&yen;
+                                <span id="price">28.9</span>
+                            </div>
+                            <div id="addCartBtn">
+                                <a href="javascript:;">&nbsp;
+                                    <span>加入购物车</span>&nbsq;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item fl" data-id="02">
+                <img src="imgs/guobao2.jpg" alt="">
+                <div class="foodCart">
+                    <div class="show">
+                        <div class="all">
+                            <div id="foodTitle" data-name="2">菠萝片</div>
+                            <div class="weight">100g × 3袋</div>
+                            <div class="price">&yen;
+                                <span id="price">29.9</span>
+                            </div>
+                            <div id="addCartBtn">
+                                <a href="javascript:;">&nbsp;
+                                    <span>加入购物车</span>&nbsq;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item fl" data-id="03">
+                <img src="imgs/guobao3.jpg" alt="">
+                <div class="foodCart">
+                    <div class="show">
+                        <div class="all">
+                            <div id="foodTitle" data-name="3">黄桃果干</div>
+                            <div class="weight">98g × 2袋</div>
+                            <div class="price">&yen;
+                                <span id="price">19.9</span>
+                            </div>
+                            <div id="addCartBtn">
+                                <a href="javascript:;" class="gouwuche">&nbsp;
+                                    <span>加入购物车</span>&nbsq;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item fl" data-id="04">
+                <img src="imgs/guobao4.jpg" alt="">
+                <div class="foodCart">
+                    <div class="show">
+                        <div class="all">
+                            <div id="foodTitle" data-name="4">紫薯仔</div>
+                            <div class="weight">100g × 3袋</div>
+                            <div class="price">&yen;
+                                <span id="price">24.9</span>
+                            </div>
+                            <div id="addCartBtn">
+                                <a href="javascript:;">&nbsp;
+                                    <span>加入购物车</span>&nbsq;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="guobaosec">
+            <div class="item fl" data-id="05">
+                <img src="imgs/guobao5.jpg" alt="">
+                <div class="foodCart">
+                    <div class="show">
+                        <div class="all">
+                            <div id="foodTitle" data-name="5">精选混合果干</div>
+                            <div class="weight">100g × 2袋</div>
+                            <div class="price">&yen;
+                                <span id="price">21.9</span>
+                            </div>
+                            <div id="addCartBtn">
+                                <a href="javascript:;">&nbsp;
+                                    <span>加入购物车</span>&nbsq;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item fl" data-id="06">
+                <img src="imgs/guobao6.jpg" alt="">
+                <div class="foodCart">
+                    <div class="show">
+                        <div class="all">
+                            <div id="foodTitle" data-name="6">阿胶蜜枣</div>
+                            <div class="weight">175g × 2袋</div>
+                            <div class="price">&yen;
+                                <span id="price">29.9</span>
+                            </div>
+                            <div id="addCartBtn">
+                                <a href="javascript:;">&nbsp;
+                                    <span>加入购物车</span>&nbsq;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item fl" data-guid="g07">
+                <img src="imgs/guobao7.jpg" alt="">
+                <div class="foodCart">
+                    <div class="show">
+                        <div class="all">
+                            <div id="foodTitle" data-name="7">山楂新款组合</div>
+                            <div class="weight">1170g × 1份</div>
+                            <div class="price">&yen;
+                                <span id="price">42.9</span>
+                            </div>
+                            <div id="addCartBtn">
+                                <a href="javascript:;">&nbsp;
+                                    <span>加入购物车</span>&nbsq;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item fl" data-guid="g08">
+                <img src="imgs/guobao8.jpg" alt="">
+                <div class="foodCart">
+                    <div class="show">
+                        <div class="all">
+                            <div id="foodTitle" data-name="8">梅子组合</div>
+                            <div class="weight">425g × 1份</div>
+                            <div class="price">&yen;
+                                <span id="price">29.9</span>
+                            </div>
+                            <div id="addCartBtn">
+                                <a href="javascript:;">&nbsp;
+                                    <span>加入购物车</span>&nbsq;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="guobao" style="background-color: #272c32;">
+        <img src="imgs/shirou.png" alt="" class="title">
+        <div class="guobaosec clearfix">
+            <div class="item fl" data-guid="g09">
+                <img src="imgs/shirou1.jpg" alt="">
+                <div class="foodCart">
+                    <div class="show">
+                        <div class="all">
+                            <div id="foodTitle" data-name="9">麻辣牛肉</div>
+                            <div class="weight">165g × 1袋</div>
+                            <div class="price">&yen;
+                                <span id="price">34.9</span>
+                            </div>
+                            <div id="addCartBtn">
+                                <a href="javascript:;">&nbsp;
+                                    <span>加入购物车</span>&nbsq;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item fl" data-guid="g10">
+                <img src="imgs/shirou2.jpg" alt="">
+                <div class="foodCart">
+                    <div class="show">
+                        <div class="all">
+                            <div id="foodTitle" data-name="10">牙签牛肉</div>
+                            <div class="weight">100g × 1袋</div>
+                            <div class="price">&yen;
+                                <span id="price">26.9</span>
+                            </div>
+                            <div id="addCartBtn">
+                                <a href="javascript:;">&nbsp;
+                                    <span>加入购物车</span>&nbsq;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item fl" data-guid="g11">
+                <img src="imgs/shirou3.jpg" alt="">
+                <div class="foodCart">
+                    <div class="show">
+                        <div class="all">
+                            <div id="foodTitle" data-name="11">牛肉粒</div>
+                            <div class="weight">98g × 1袋</div>
+                            <div class="price">&yen;
+                                <span id="price">19.9</span>
+                            </div>
+                            <div id="addCartBtn" data-name="b">
+                                <a href="javascript:;">&nbsp;
+                                    <span>加入购物车</span>&nbsq;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item fl" data-guid="g12">
+                <img src="imgs/shirou4.jpg" alt="">
+                <div class="foodCart">
+                    <div class="show">
+                        <div class="all">
+                            <div id="foodTitle" data-name="12">麻辣牛百叶</div>
+                            <div class="weight">90g × 1袋</div>
+                            <div class="price">&yen;
+                                <span id="price">21.9</span>
+                            </div>
+                            <div id="addCartBtn">
+                                <a href="javascript:;">&nbsp;
+                                    <span>加入购物车</span>&nbsq;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="guobaosec clearfix">
+            <div class="item fl" data-guid="g13">
+                <img src="imgs/shirou5.jpg" alt="">
+                <div class="foodCart">
+                    <div class="show">
+                        <div class="all">
+                            <div id="foodTitle" data-name="13">澳式黑椒牛排</div>
+                            <div class="weight">105g × 1盒</div>
+                            <div class="price">&yen;
+                                <span id="price">24.9</span>
+                            </div>
+                            <div id="addCartBtn">
+                                <a href="javascript:;">&nbsp;
+                                    <span>加入购物车</span>&nbsq;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item fl" data-guid="g14">
+                <img src="imgs/shirou6.jpg" alt="">
+                <div class="foodCart">
+                    <div class="show">
+                        <div class="all">
+                            <div id="foodTitle" data-name="14">冷吃兔</div>
+                            <div class="weight">130g × 1袋</div>
+                            <div class="price">&yen;
+                                <span id="price">21.9</span>
+                            </div>
+                            <div id="addCartBtn">
+                                <a href="javascript:;">&nbsp;
+                                    <span>加入购物车</span>&nbsq;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item fl" data-guid="g15">
+                <img src="imgs/shirou7.jpg" alt="">
+                <div class="foodCart">
+                    <div class="show">
+                        <div class="all">
+                            <div id="foodTitle" data-name="15">奥尔良小鸡腿</div>
+                            <div class="weight">248g × 1份</div>
+                            <div class="price">&yen;
+                                <span id="price">27.9</span>
+                            </div>
+                            <div id="addCartBtn">
+                                <a href="javascript:;">&nbsp;
+                                    <span>加入购物车</span>&nbsq;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item fl" data-guid="g16">
+                <img src="imgs/shirou8.jpg" alt="">
+                <div class="foodCart">
+                    <div class="show">
+                        <div class="all">
+                            <div id="foodTitle" data-name="16">甜辣鸭舌</div>
+                            <div class="weight">120g × 1份</div>
+                            <div class="price">&yen;
+                                <span id="price">39.9</span>
+                            </div>
+                            <div id="addCartBtn">
+                                <a href="javascript:;">&nbsp;
+                                    <span>加入购物车</span>&nbsq;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% include "./weibu.html" %} 
+<!-- 加入购物车 -->
+<!-- 询问是否确定加入购物车 -->
+<div class="addBuyCar">
+
+    <div class="addBuyCarShow">
+        <div class="buyCarHeader">
+            <h3>加入购物车</h3>
+            <a href="javascript:;"></a>
+        </div>
+        <div class="picture">
+            <img src="">
+        </div>
+        <div class="middle clear_fix">
+            <div class="title fl">
+                <h2 data-name=""></h2>
+            </div>
+            <div class="price fr">
+                <small>&yen;</small>
+                <span id="price"></span>
+            </div>
+        </div>
+        <div class="buyCarFooter">
+            <a href="javascript:;">加入购物车</a>
+        </div>
+    </div>
+    <!--加入购物车成功-->
+    <div class="addBuyCarOver">
+        <div class="buyCarHeader">
+            <h3>提示信息</h3>
+            <a href="javascript:;"></a>
+        </div>
+        <div class="middle clear_fix">
+            <h2>加入购物车成功</h2>
+        </div>
+        <div class="buyCarFooter">
+            <a href="shop.html">去结算</a>
+        </div>
+    </div>
+</div>
+<!--购物车页面-->
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/buycart.js"></script> 
+{% include "./weibu.html" %} 
+{% endblock %}

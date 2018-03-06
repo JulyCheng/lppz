@@ -128,7 +128,6 @@ window.onload = function () {
                     var conf = confirm('确定删除此商品吗？');
                     if (conf) {
                         // this.parentNode.removeChild(this);
-                        var node=this.id;
                         localStorage.removeItem(this.id);
                         location.reload();
                     }

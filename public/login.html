@@ -42,6 +42,7 @@
                 phone,
                 pwd
             }
+            sessionStorage.setItem("user1",JSON.stringify(data));
             fetch(
                 "http://localhost:3001/users/login", 
                 {
@@ -56,6 +57,7 @@
                             form.reset();
                             window.location.href="lppzShopping.html"
                         }
+
                     })
                     .catch(e => console.log(e))
             
