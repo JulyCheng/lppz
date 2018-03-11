@@ -6,6 +6,7 @@
 	
 <link rel="shortcut icon" href="imgs/favicon.ico" type="image/x-icon">
 <link rel="stylesheet" href="css/header.css">
+<link rel="stylesheet" href="css/toolbar.css">
 <link rel="stylesheet" href="css/weibu.css">
 <link rel="stylesheet" href="css/cart.css"> 
 </head>
@@ -26,17 +27,6 @@
             </li>
             <li id="headerLogout" class="headerLogout none" style="display: none;">
                 <a href="" class="logout" style="color:#ed4545">[退出]</a>
-            </li>
-            <li class="none">
-                <a href="https://login.lppz.com/alipayapi" class="alipay">支付宝快捷登录</a>
-            </li>
-            <li class="none">
-                <a href="https://graph.qq.com/oauth2.0/authorize?response_type=code&client_id=101096899&redirect_uri=http://www.lppz.com/index.jsp?client_name=qq&scope="
-                 class="qq">QQ</a>
-            </li>
-            <li class="none">
-                <a href="https://api.weibo.com/oauth2/authorize?client_id=4151902230&response_type=code&redirect_uri=http://www.lppz.com/index.jsp?client_name=sina&scope="
-                 class="weibo">微博登录</a>
             </li>
         </ul>
         <script src="./js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
@@ -150,36 +140,41 @@
         </ul>
     </div>
 </div>
-
 <div class="header">
-    <div class="head-main wide clearfix">
-        <div class="logo">
-            <a href="/"></a>
-        </div>
-        <div class="hd-search">
-            <div class="hot-tag">
-                <span>热门搜索:</span>
-                <a href="">松子</a>
-                <a href="">牛肉</a>
-                <a href="">话梅</a>
-                <a href="">花生瓜子</a>
-                <a href="">核桃</a>
-                <a href="">开心果</a>
+        <div class="head-main wide clearfix">
+            <div class="logo">
+                <a href="/"></a>
             </div>
-            <div class="search-area">
-                <form action="" method="get" id="productSearchForm" target="_blank">
-                    <input type="text" name="keyword" id="keyword" value="商品关键字" onfocus="if(value==='商品关键字'){value=''}" onblur="if(value===''){value='商品关键字'}"
-                    />
-                    <input type="submit" value="" class="ser-btn" />
-                </form>
+            <div class="hd-search">
+                <div class="hot-tag">
+                    <span>热门搜索:</span>
+                    <a href="">松子</a>
+                    <a href="">牛肉</a>
+                    <a href="">话梅</a>
+                    <a href="">花生瓜子</a>
+                    <a href="">核桃</a>
+                    <a href="">开心果</a>
+                </div>
+                <div class="search-area">
+                    <form action="" method="get" id="productSearchForm" target="_blank">
+                        <input type="text" name="keyword" id="keyword" value="商品关键字" onfocus="if(value==='商品关键字'){value=''}" onblur="if(value===''){value='商品关键字'}"
+                        />
+                        <input type="submit" value="" class="ser-btn" />
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="menu">
+            <div class="menu-main wide">
+                <ul class="menu-list">
+                    <li>
+                        <a href="">上新尝鲜</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
-    <div class="buyCar fr clearfix">
-        <span id="buyNum" class="fr" style="display:block"></span>
-        <a href="shop.html" class="buyCarLogo fr"></a>
-    </div>
-</div>
+
 <!-- 轮播图 -->
 <div class="slider"></div>
 <script src="js/module.js"></script>
@@ -492,135 +487,53 @@
     </div>
 </div>
 
-<div class="footer">
-    <div class="foot-service">
+<div class="rtoolbar">
         <ul>
-            <li class="zp">
-                <em>100%</em>
-                <p>正品保证</p>
+            <li>
+                <div class="icon">
+                    <a href="">
+                        <i class="tab-ico member"></i>
+                        <em class="tab-text">良品会员</em>
+                    </a>
+                </div>
             </li>
-            <li class="th">
-                <em>10天</em>
-                <p>无理由退换货</p>
+            <li>
+                <div class="icon1">
+                    <a href="shop.html">
+                        <i class="tab-ico cart"></i>
+                        <span class="carttext">购物车</span>
+                        <i id="buyNum"></i>
+                    </a>
+                </div>
             </li>
-            <li class="by">
-                <em>满68元</em>
-                <p>全场包邮</p>
+            <li>
+                <div class="icon">
+                    <a href="#">
+                        <i class="tab-ico focus"></i>
+                        <em class="tab-text">我的关注</em>
+                    </a>
+                </div>
             </li>
-            <li class="dx">
-                <em>积分抵现金</em>
-                <p>100积分=1元</p>
+            <li>
+                <div class="icon">
+                    <a href="#">
+                        <i class="tab-ico qrcode"></i>
+                        <p class="qrdesc"></p>
+                    </a>
+                </div>
             </li>
-            <li class="ys">
-                <em>开箱验货</em>
-                <p>先验货再签收</p>
-            </li>
-            <li class="fh">
-                <em>多仓就近发货</em>
-                <p>快速直达</p>
+            <li>
+                <div class="icon">
+                    <a href="javascript:window.scrollTo(0,0);">
+                        <i class="tab-ico tabtop"></i>
+                        <em class="tab-text">回到顶部</em>
+                    </a>
+                </div>
             </li>
         </ul>
     </div>
-    <div class="foot-area">
-        <div class="foot-cont clearfix">
-            <div class="foot-contact">
-                <div class="ctc-icon"></div>
-                <div class="ctc-tel">
-                    <p>
-                        <strong>400-1177-517</strong>
-                    </p>
-                    <p>良品铺子客服热线
-                        <br> 周一至周日：9：00-22：00
-                    </p>
-                    <p>招商热线
-                        <br> 400-1177-517
-                    </p>
-                </div>
-            </div>
-            <div class="foot-msg">
-                <dl>
-                    <dt>购物指南</dt>
-                    <dd>
-                        <a href="">安全账户</a>
-                        <a href="">购物流程</a>
-                        <a href="">老顾客重置密码</a>
-                        <a href="">生日礼购物流程</a>
-                        <a href="">找回密码</a>
-                    </dd>
-                </dl>
-                <dl>
-                    <dt>物流配送</dt>
-                    <dd>
-                        <a href="">配送说明</a>
-                        <a href="">签收与验货</a>
-                    </dd>
-                </dl>
-                <dl>
-                    <dt>付款说明</dt>
-                    <dd>
-                        <a href="">发票制度</a>
-                        <a href="">公司转账</a>
-                        <a href="">在线支付</a>
-                    </dd>
-                </dl>
-                <dl>
-                    <dt>客户服务</dt>
-                    <dd>
-                        <a href="">退换货服务</a>
-                        <a href="">联系我们</a>
-                        <a href="">退款说明</a>
-                    </dd>
-                </dl>
-                <dl>
-                    <dt>会员专区</dt>
-                    <dd>
-                        <a href="">优惠券使用规则</a>
-                        <a href="">积分制度</a>
-                        <a href="">会员须知</a>
-                    </dd>
-                </dl>
-            </div>
-            <div class="foot-focus"></div>
-        </div>
-        <div class="foot-nav">
-            <ul>
-                <li>
-                    <a href="">关于我们</a>
-                </li>
-                <li>
-                    <a href="">联系我们</a>
-                </li>
-                <li>
-                    <a href="">客户服务</a>
-                </li>
-                <li>
-                    <a href="">诚聘英才</a>
-                </li>
-                <li>
-                    <a href="">商务合作</a>
-                </li>
-                <li>
-                    <a href="">媒体报道</a>
-                </li>
-                <li>
-                    <a href="">网站地图</a>
-                </li>
-                <li>
-                    <a href="">站长招募</a>
-                </li>
-            </ul>
-        </div>
-        <div class="foot-copyright">
-            <p>Copyright@2006-2017 湖北良品铺子电子商务有限公司 All rights Reserved</p>
-            <a class="beihao" href="">鄂ICP备15022981号</a>
-            <br>
-            <a href="">
-                <img src="img/wangjian.png" alt="">
-            </a>
-        </div>
-    </div>
-</div>
- 
+    <script src="js/cartNum.js"></script>
+
 <!-- 加入购物车 -->
 <!-- 询问是否确定加入购物车 -->
 <div class="addBuyCar">

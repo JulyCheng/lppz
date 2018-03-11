@@ -5,6 +5,7 @@ a {
   width: 36px;
   height: 400px;
   position: fixed;
+  z-index: 100;
   top: 20%;
   right: 0;
   overflow: visible;
@@ -52,7 +53,8 @@ a {
       width: 36px;
       height: 36px; }
       .rtoolbar ul li .icon:hover em {
-        transition: all 0.25s linear;
+        color: red;
+        transition: all 0.25s linear 0s;
         left: -78px;
         display: block; }
       .rtoolbar ul li .icon a .member {
@@ -85,7 +87,7 @@ a {
         position: absolute;
         top: 45px;
         padding: 0 5px 5px; }
-      .rtoolbar ul li .icon1 a .cart-num {
+      .rtoolbar ul li .icon1 a #buyNum {
         display: block;
         width: 19px;
         height: 18px;

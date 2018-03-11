@@ -30,39 +30,6 @@
             <a href="regist.html">马上注册</a>
         </div>
     </div>
-    <script src="./js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
-    <script src="./js/login.js" type="text/javascript" charset="utf-8"></script>
-    <script>
-        function login(e) {
-            e = e || event;
-            e.preventDefault();
-            let phone = document.getElementById('phone').value;
-            let pwd = document.getElementById('pwd').value;
-            let data = {
-                phone,
-                pwd
-            }
-            sessionStorage.setItem("user1",JSON.stringify(data));
-            fetch(
-                "http://localhost:3001/users/login", 
-                {
-                    method: 'post',
-                    body: JSON.stringify(data)
-                })
-                    .then(resp => resp.json())
-                    .then(data=>{
-                        console.log(data.status);
-                        if(data.status){
-                            let form=document.getElementsByTagName('form')[0];
-                            form.reset();
-                            window.location.href="lppzShopping.html"
-                        }
-
-                    })
-                    .catch(e => console.log(e))
-            
-        }
-    </script>
+    <script src="./js/login.js"></script>
 </body>
-
 </html>

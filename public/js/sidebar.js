@@ -1,13 +1,4 @@
 $(document).ready(function(){
-	//购物车数目显示
-	let cartNum=$('.cart-num');
-	let num=localStorage.length;
-    if(num>0){
-		cartNum.show();
-		cartNum.text(num);
-	}else{
-		cartNum.hide();
-	}
 	var nav=(function(navObj){
 		navObj.init=function(){
 			this.n=0;

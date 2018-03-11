@@ -1,37 +1,9 @@
 {% extends './layout.html' %} {% block title %}购物车{% endblock %} {% block head %}
 <link rel="shortcut icon" href="imgs/favicon.ico" type="image/x-icon">
 <link rel="stylesheet" href="css/header.css">
+<link rel="stylesheet" href="css/toolbar.css">
 <link rel="stylesheet" href="css/weibu.css">
 <link rel="stylesheet" href="css/cart.css"> {% endblock %} {% block content %} {% include "./header.html" %}
-<div class="header">
-    <div class="head-main wide clearfix">
-        <div class="logo">
-            <a href="/"></a>
-        </div>
-        <div class="hd-search">
-            <div class="hot-tag">
-                <span>热门搜索:</span>
-                <a href="">松子</a>
-                <a href="">牛肉</a>
-                <a href="">话梅</a>
-                <a href="">花生瓜子</a>
-                <a href="">核桃</a>
-                <a href="">开心果</a>
-            </div>
-            <div class="search-area">
-                <form action="" method="get" id="productSearchForm" target="_blank">
-                    <input type="text" name="keyword" id="keyword" value="商品关键字" onfocus="if(value==='商品关键字'){value=''}" onblur="if(value===''){value='商品关键字'}"
-                    />
-                    <input type="submit" value="" class="ser-btn" />
-                </form>
-            </div>
-        </div>
-    </div>
-    <div class="buyCar fr clearfix">
-        <span id="buyNum" class="fr" style="display:block"></span>
-        <a href="shop.html" class="buyCarLogo fr"></a>
-    </div>
-</div>
 <!-- 轮播图 -->
 <div class="slider"></div>
 <script src="js/module.js"></script>
@@ -343,7 +315,7 @@
         </div>
     </div>
 </div>
-{% include "./weibu.html" %} 
+{% include "./sidebar.html" %}
 <!-- 加入购物车 -->
 <!-- 询问是否确定加入购物车 -->
 <div class="addBuyCar">

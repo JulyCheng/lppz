@@ -1,17 +1,15 @@
-function Tabs() {
-    let detail = document.querySelector('.detail-img');
-    let dimg = document.querySelector('.dimg1');
-    this.aDiv = dimg.getElementsByTagName('div');
-    this.aLi = detail.getElementsByTagName('li');
-    let dside = document.querySelector(".detail-sidebar");
-    this.item = dside.getElementsByTagName("dd");
-    this.init();
-    this.show();
-}
-
-Tabs.prototype = {
-    constructor: Tabs,
-    init: function () {
+class Tabs {
+    constructor() {
+        let detail = document.querySelector('.detail-img');
+        let dimg = document.querySelector('.dimg1');
+        this.aDiv = dimg.getElementsByTagName('div');
+        this.aLi = detail.getElementsByTagName('li');
+        let dside = document.querySelector(".detail-sidebar");
+        this.item = dside.getElementsByTagName("dd");
+        this.init();
+        this.show();
+    }
+    init(){
         var that = this;
         for (var i = 0; i < this.aLi.length; i++) {
             this.aLi[i].index = i;
@@ -22,8 +20,8 @@ Tabs.prototype = {
                 that.aDiv[this.index].style.display = 'block';
             }
         }
-    },
-    show: function () {
+    }
+    show(){
         var that = this;
         for (let i = 0; i < this.item.length; i++) {
             this.item[i].index = i;
@@ -36,4 +34,4 @@ Tabs.prototype = {
         }
     }
 }
-var aa = new Tabs();
+let aa = new Tabs();

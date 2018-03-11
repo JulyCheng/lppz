@@ -1,68 +1,4 @@
 $(function () {
-	//将购物车信息发送到服务器
-	function sendToSer() {
-		//遍历localstorage中的数据，并将数据存储为json类型字符串
-		let buyCarData = "{";
-		for (let i = 0; i < localStorage.length; i++) {
-			let bb = localStorage.key(i);
-			let cc = localStorage.getItem(bb);
-			buyCarData = buyCarData + bb + ":" + "\"" + cc + "\"" + ",";
-		}
-		buyCarData = buyCarData + "}";
-		//将json类型字符串转换为json对象
-		let jsonData = eval('(' + buyCarData + ')');
-		//将json对象发送给服务器，返回发送状态
-		$.post('/users/buyCarInfo', jsonData, function (data, status) {
-			console.log(status);
-		});
-	}
-	//从服务器获取购物车信息，并在购物车页面中加载信息
-	function getFromSer() {
-		localStorage.clear();
-		$.get('/users/getBuyCarInfo', loginUser, function (data, status) {
-			//遍历取回的数据，并将数据按照键值对形式存储到localstorage中
-			for (let p in data) {
-				localStorage.setItem(p, data[p]);
-			}
-			loadBuyCarInfo();
-		});
-	}
-	let loginUser = sessionStorage.getItem("loginUser");
-
-	let $totalNumShow = $("#totalNum");
-	let $buyNumShow = $("#buyNum");
-	let $totalPriceShow = $("#totalPrice");
-	let totalNum = localStorage.length;
-	console.log(totalNum);
-	if (totalNum) {
-		numShow();
-	} else {
-		// localStorage.setItem("total", 0);
-		totalNum = localStorage.length;
-		numShow();
-	}
-	//计算总价格
-	function totalPriceShow() {
-		let thePrice = 0;
-		$(".buyCarMainSection li").find(".goodPrice").children("span").each(function () {
-			let thisPrice = $(this).text();
-			thePrice = thePrice + parseFloat(thisPrice);
-		});
-		$totalPriceShow.text(thePrice.toFixed(2));
-	}
-
-	//当totalNum=0时，角标隐藏
-	function numShow() {
-		if (totalNum <= 0) {
-			totalNum = 0;
-			$buyNumShow.hide();
-		} else {
-			$buyNumShow.show();
-			$buyNumShow.text(totalNum);
-			$totalNumShow.text(totalNum);
-		}
-	}
-
 	// 点击加入购物车按钮时
 	let $addCarBtn = $("#addCartBtn a");
 	console.log($addCarBtn.length);
@@ -95,20 +31,17 @@ $(function () {
 				'id': dataname,
 				'pic': $picture,
 				'value':1,
+				'subtotal':$price,
 				'tip': $alltitle,
 				'price': $price
 			};
 			localStorage.setItem('cartList' + i, JSON.stringify(cartList));
-			// location.reload();
-			console.log(localStorage.getItem("cartList"));
 		}
 	}
-
 	//点击关闭按钮，关闭弹窗
 	$(".addBuyCarShow .buyCarHeader a").click(function () {
 		$addBuyCar.hide();
 	});
-
 	$(".addBuyCarOver .buyCarHeader a").click(function () {
 		$addBuyCar.hide();
 		clearTimeout(close);
@@ -148,7 +81,6 @@ $(function () {
 				sendToSer();
 			}
 		} else {
-			numShow();
 			$addBuyCarShow.hide();
 			$addBuyCarOver.show();
 			close = setTimeout(function () {
@@ -167,7 +99,6 @@ $(function () {
 			}
 		}
 	}
-
 	//打开购物车界面
 	$(".header .buyCar .buyCarLogo").click(openBuyCar);
 	$(".addBuyCarOver .buyCarFooter a").click(openBuyCar);

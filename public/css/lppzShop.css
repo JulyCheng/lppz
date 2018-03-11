@@ -328,14 +328,13 @@
 	color:#feedb5;
 	cursor:pointer;
 }
-
-
 .move{
 	position: fixed;
 	width: 140px;
 	height: 380px;
 	left:25px;
 	top: 30%;
+	z-index: 100;
 }
 .move ul{
 	list-style: none;

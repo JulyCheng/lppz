@@ -4,7 +4,7 @@ function createCart() {
         var len = JSON.parse(localStorage.getItem(p));
         document.documentElement.scrollTop = 0;
         var tr = document.createElement('tr');
-        tr.id=p;
+        tr.id = p;
         var td1 = document.createElement('td');
         td1.className = 'checkbox';
         var input1 = document.createElement('input');
@@ -35,11 +35,11 @@ function createCart() {
         td4.className = 'count';
         var span1 = document.createElement('span');
         span1.className = 'reduce';
-        // span1.innerText="-";
+        span1.innerText = "-";
         var input2 = document.createElement('input');
         input2.className = "count-input";
         input2.type = "text";
-        input2.value =len.value;
+        input2.value = len.value;
         var span2 = document.createElement('span');
         span2.className = "add";
         span2.innerText = "+";
@@ -50,7 +50,7 @@ function createCart() {
 
         var td5 = document.createElement('td');
         td5.className = 'subtotal';
-        td5.innerText = len.price;
+        td5.innerText = len.subtotal;
         tr.appendChild(td5);
 
         var td6 = document.createElement('td');

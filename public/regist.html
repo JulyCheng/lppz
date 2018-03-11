@@ -31,39 +31,10 @@
             <button type="submit" id="btn">立即注册</button>
         </form>
         <div class="signed-link">已经有账号？
-                <a href="login.html">马上登录</a>
+            <a href="login.html">马上登录</a>
         </div>
     </div>
-    <script src="./js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="./js/regist.js" type="text/javascript" charset="utf-8"></script>
-    <script>
-        function regist(e) {
-            e = e || event;
-            e.preventDefault();
-            let phone = document.getElementById('phone').value;
-            let pwd = document.getElementById('pwd').value;
-            let data = {
-                phone,
-                pwd
-            }
-            fetch(
-                "http://localhost:3001/users/regist", 
-                {
-                    method: 'post',
-                    body: JSON.stringify(data)
-                })
-                    .then(resp => resp.json())
-                    .then(data=>{
-                        console.log(data.id);
-                        if(data.id){
-                            let form=document.getElementsByTagName('form')[0];
-                            form.reset();
-                        }
-                    })
-                    .catch(e => console.log(e))
-            
-        }
-    </script>
 </body>
 
 </html>

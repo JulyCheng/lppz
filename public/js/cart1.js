@@ -36,7 +36,8 @@ window.onload = function () {
 				tr[i].className = 'on';
 				seleted += parseInt(tr[i].getElementsByTagName('input')[1].value);
 				price += parseFloat(tr[i].cells[4].innerHTML);
-				HTMLstr += '<div><img src="' + tr[i].getElementsByTagName('img')[0].src + '"><span class="del" index="' + i + '">取消选择</span></div>'
+                HTMLstr += '<div><img src="' + tr[i].getElementsByTagName('img')[0].src +
+                 '"><span class="del" index="' + i + '">取消选择</span></div>'
 			}
 			else {
 				tr[i].className = '';
@@ -53,13 +54,18 @@ window.onload = function () {
     // 计算单行价格
     function getSubtotal(tr) {
         var cells = tr.cells;
+        var id=tr.id;
+        var local=JSON.parse(localStorage.getItem(id))
         console.log(cells);
         var price = cells[2]; //单价
         var subtotal = cells[4]; //小计td
         var countInput = tr.getElementsByTagName('input')[1]; //数目input
         var span = tr.getElementsByTagName('span')[1]; //-号
         //写入HTML
-        subtotal.innerHTML = (parseInt(countInput.value) * parseFloat(price.innerHTML)).toFixed(2);
+        var val=(parseInt(countInput.value) * parseFloat(price.innerHTML)).toFixed(2);
+        local.subtotal=val;
+        localStorage.setItem(id,JSON.stringify(local))
+        subtotal.innerHTML = val;
         //如果数目只有一个，把-号去掉
         if (countInput.value == 1) {
             span.innerHTML = '';
@@ -84,7 +90,6 @@ window.onload = function () {
             getTotal();//选完更新总计
         }
     }
-
     // 显示已选商品弹层
     selected.onclick = function () {
         if (selectedTotal.innerHTML != 0) {
@@ -110,17 +115,23 @@ window.onload = function () {
             var e = e || window.event;
             var el = e.target || e.srcElement; //通过事件对象的target属性获取触发元素
             var cls = el.className; //触发元素的class
-            var countInout = this.getElementsByTagName('input')[1]; // 数目input
-            var value = parseInt(countInout.value); //数目
+            var countInput = this.getElementsByTagName('input')[1]; // 数目input
+            var value = parseInt(countInput.value); //数目
             //通过判断触发元素的class确定用户点击了哪个元素
             switch (cls) {
                 case 'add': //点击了加号
-                    countInout.value = value + 1;
+                    countInput.value = value + 1;
                     getSubtotal(this);
+                    var vInput=JSON.parse(localStorage.getItem(this.id))
+                    vInput.value=countInput.value;
+                    localStorage.setItem(this.id,JSON.stringify(vInput));
                     break;
                 case 'reduce': //点击了减号
                     if (value > 1) {
-                        countInout.value = value - 1;
+                        countInput.value = value - 1;
+                        var vInput=JSON.parse(localStorage.getItem(this.id))
+                        vInput.value=countInput.value;
+                        localStorage.setItem(this.id,JSON.stringify(vInput));
                         getSubtotal(this);
                     }
                     break;
@@ -153,20 +164,15 @@ window.onload = function () {
         if (selectedTotal.innerHTML != 0) {
             var con = confirm('确定删除所选商品吗？'); //弹出确认框
             if (con) {
-                for (var i = 0; i < tr.length; i++) {
-                    // 如果被选中，就删除相应的行
-                    if (tr[i].getElementsByTagName('input')[0].checked) {
-                        tr[i].parentNode.removeChild(tr[i]); // 删除相应节点
-                        i--; //回退下标位置
-                    }
-                }
+                var storage=window.localStorage;
+                storage.clear();
+                location.reload();
             }
         } else {
             alert('请选择商品！');
         }
         getTotal(); //更新总数
     }
-	// console.log("\u767e\u5ea6\u641c\u7d22\u3010\u7d20\u6750\u5bb6\u56ed\u3011\u4e0b\u8f7d\u66f4\u591aJS\u7279\u6548\u4ee3\u7801");
     // 默认全选
     checkAllInputs[0].checked = true;
     checkAllInputs[0].onclick();

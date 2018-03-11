@@ -5,6 +5,7 @@ a{
     width: 36px;
     height:400px;
     position: fixed;
+    z-index: 100;
     top: 20%;
     right:0;
     overflow: visible;
@@ -59,7 +60,8 @@ a{
                 width: 36px;
                 height: 36px;
                 &:hover em{
-                    transition: all 0.25s linear;
+                    color:red;
+                    transition: all 0.25s linear 0s;
                     left:-78px;
                     display: block;
                 }
@@ -105,7 +107,7 @@ a{
                         top: 45px;
                         padding:0 5px 5px;
                     }
-                    .cart-num{
+                    #buyNum{
                         display:block;
                         width: 19px;
                         height: 18px;

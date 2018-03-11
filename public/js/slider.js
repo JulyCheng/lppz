@@ -23,15 +23,11 @@ Slider.prototype = {
         this.slider = document.createElement('div');
         this.slider.style = 'overflow:hidden;width:100%;height:100%;position:relative;';
         this.createImg();
-        // this.createBtn('left');
-        // this.createBtn('right');
         this.createIndicator();
         this.container.appendChild(this.slider);
 
         this.setTimer();
         this.setIndicator();
-        // this.setBtn();
-        // this.toggle();
     },
     createImg: function () {
         this.imgsArea = document.createElement('ul');
@@ -55,19 +51,6 @@ Slider.prototype = {
         }
         this.slider.appendChild(this.imgsArea);
     },
-    // createBtn: function (mark) {
-    //     var btn = document.createElement('div');
-    //     btn.style= 'width:60px;height:60px;position:absolute;top:50%;margin-top:-20px;cursor:pointer;';
-    //     if (mark == "left") {
-    //         btn.style.left =  '10px';
-    //         btn.innerHTML = '&lt;';
-    //     } else if (mark == 'right') {
-    //         btn.style.right='10px';
-    //         btn.innerHTML = '&gt;';
-    //     }
-    //     this.slider.appendChild(btn);
-    //     this.btns.push(btn);
-    // },
     createIndicator: function () {
         this.indicatorWrap = document.createElement('div');
         this.indicatorWrap.style = 'text-align:center;width:600px;height:20px;position:absolute;bottom:30px;left:50%;margin-left:-300px;'
@@ -101,7 +84,6 @@ Slider.prototype = {
                 that.index = 0;
             }
             that.getStatu();
-            // console.log(that.index);
         }, 2000);
     },
     setIndicator: function () {
@@ -114,57 +96,9 @@ Slider.prototype = {
                 animate(that.imgsArea, {
                     left: -(this.index + 1) * that.container.offsetWidth
                 })
-                // console.log(that.index);
             }
         }
     },
-    // setBtn: function () {
-    //     var that = this;
-    //     that.btns[0].onclick = function () {
-    //         that.index--;
-    //         animate(that.imgsArea, {
-    //             left: -(that.index + 1) * that.container.offsetWidth
-    //         })
-    //         if (that.imgsArea.style.left == 0 + 'px') {
-    //             that.imgsArea.style.left = -that.len * that.container.offsetWidth + 'px';
-    //         }
-    //         if (that.index == -1) {
-    //             that.index = 1;
-    //         }
-    //         that.getStatu();
-    //         console.log(that.index);
-    //     }
-    //     that.btns[1].onclick = function () {
-    //         that.index++;
-    //         if (that.imgsArea.style.left == -(that.len + 1) * that.container.offsetWidth + 'px') {
-    //             that.imgsArea.style.left = -that.container.offsetWidth + 'px';
-    //         }
-    //         animate(that.imgsArea, {
-    //             left: -(that.index + 1) * that.container.offsetWidth
-    //         })
-
-    //         if (that.index == that.len) {
-    //             that.index = 0;
-    //         }
-    //         that.getStatu();
-    //         console.log(that.index);
-    //     }
-    // },
-    // toggle: function () {
-    //     var that = this
-    //     that.slider.onmouseover = function () {
-    //         that.indicatorWrap.style.display = "block";
-    //         that.btns[0].style.display = "block";
-    //         that.btns[1].style.display = "block";
-    //         clearInterval(that.timer);
-    //     }
-    //     that.slider.onmouseleave = function () {
-    //         that.indicatorWrap.style.display = "none";
-    //         that.btns[0].style.display = "none";
-    //         that.btns[1].style.display = "none";
-    //         that.setTimer();
-    //     }
-    // },
     getStatu: function () {
         for (var i = 0; i < this.len; i++) {
             this.indicators[i].className = '';

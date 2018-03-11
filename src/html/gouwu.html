@@ -6,31 +6,6 @@
 <link rel="stylesheet" href="css/weibu.css"> {% endblock %} 
 {% block content %}
 {% include "./header.html" %}
-<div class="header">
-    <div class="head-main wide clearfix">
-        <div class="logo">
-            <a href="/"></a>
-        </div>
-        <div class="hd-search">
-            <div class="hot-tag">
-                <span>热门搜索:</span>
-                <a href="">松子</a>
-                <a href="">牛肉</a>
-                <a href="">话梅</a>
-                <a href="">花生瓜子</a>
-                <a href="">核桃</a>
-                <a href="">开心果</a>
-            </div>
-            <div class="search-area">
-                <form action="" method="get" id="productSearchForm" target="_blank">
-                    <input type="text" name="keyword" id="keyword" value="商品关键字" onfocus="if(value==='商品关键字'){value=''}" onblur="if(value===''){value='商品关键字'}"
-                    />
-                    <input type="submit" value="" class="ser-btn" />
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
 <div class="content-detail">
     <div class="detail-img">
         <div class="dimg1"></div>
@@ -60,7 +35,7 @@
                 <dd>
                     <div class="price">
                         <span class="rmb">￥</span>
-                        <span class="Price">29.9</span>
+                        <span class="Price"></span>
                         <em class="type">爆款促销</em>
                     </div>
                 </dd>
@@ -89,7 +64,7 @@
         </ul>
         <div class="jiagou">
             <div class="kouwei">食品口味
-                <div class="desc">原味108g×3袋</div>
+                <div class="desc"></div>
             </div>
             <div class="count">数量
                 <input class="num" placeholder="1" value="1"></input>
@@ -111,52 +86,8 @@
         </div>
     </div>
 </div>
-<!-- 右侧边导航栏 -->
-<div class="rtoolbar">
-    <ul>
-        <li>
-            <div class="icon">
-                <a href="#">
-                    <i class="tab-ico member"></i>
-                    <em class="tab-text">良品会员</em>
-                </a>
-            </div>
-        </li>
-        <li>
-            <div class="icon1">
-                <a href="shop.html">
-                    <i class="tab-ico cart"></i>
-                    <span class="carttext">购物车</span>
-                    <i class="cart-num"></i>
-                </a>
-            </div>
-        </li>
-        <li>
-            <div class="icon">
-                <a href="#">
-                    <i class="tab-ico focus"></i>
-                    <em class="tab-text">我的关注</em>
-                </a>
-            </div>
-        </li>
-        <li>
-            <div class="icon">
-                <a href="#">
-                    <i class="tab-ico qrcode"></i>
-                    <p class="qrdesc"></p>
-                </a>
-            </div>
-        </li>
-        <li>
-            <div class="icon">
-                <a href="javascript:window.scrollTo(0,0);">
-                    <i class="tab-ico tabtop"></i>
-                    <em class="tab-text">回到顶部</em>
-                </a>
-            </div>
-        </li>
-    </ul>
-</div>
+{% include "./sidebar.html" %}
+<script src="js/cartNum.js"></script>
 <div class="goods-detail">
     <div class="tooldetail">
         <div class="detailList">商品详情</div>

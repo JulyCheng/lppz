@@ -15,17 +15,6 @@
             <li id="headerLogout" class="headerLogout none" style="display: none;">
                 <a href="" class="logout" style="color:#ed4545">[退出]</a>
             </li>
-            <li class="none">
-                <a href="https://login.lppz.com/alipayapi" class="alipay">支付宝快捷登录</a>
-            </li>
-            <li class="none">
-                <a href="https://graph.qq.com/oauth2.0/authorize?response_type=code&client_id=101096899&redirect_uri=http://www.lppz.com/index.jsp?client_name=qq&scope="
-                 class="qq">QQ</a>
-            </li>
-            <li class="none">
-                <a href="https://api.weibo.com/oauth2/authorize?client_id=4151902230&response_type=code&redirect_uri=http://www.lppz.com/index.jsp?client_name=sina&scope="
-                 class="weibo">微博登录</a>
-            </li>
         </ul>
         <script src="./js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="./js/validate.js"></script>
@@ -138,3 +127,37 @@
         </ul>
     </div>
 </div>
+<div class="header">
+        <div class="head-main wide clearfix">
+            <div class="logo">
+                <a href="/"></a>
+            </div>
+            <div class="hd-search">
+                <div class="hot-tag">
+                    <span>热门搜索:</span>
+                    <a href="">松子</a>
+                    <a href="">牛肉</a>
+                    <a href="">话梅</a>
+                    <a href="">花生瓜子</a>
+                    <a href="">核桃</a>
+                    <a href="">开心果</a>
+                </div>
+                <div class="search-area">
+                    <form action="" method="get" id="productSearchForm" target="_blank">
+                        <input type="text" name="keyword" id="keyword" value="商品关键字" onfocus="if(value==='商品关键字'){value=''}" onblur="if(value===''){value='商品关键字'}"
+                        />
+                        <input type="submit" value="" class="ser-btn" />
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="menu">
+            <div class="menu-main wide">
+                <ul class="menu-list">
+                    <li>
+                        <a href="">上新尝鲜</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
