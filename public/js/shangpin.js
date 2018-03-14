@@ -1,13 +1,13 @@
-class Shangpin{
-	constructor(con,num){
+class Shangpin {
+	constructor(con, num) {
 		this.con = con;
-	    this.num = num;
-	    this.index = 0;
-	    this.indicators = [];
-	    this.init();
+		this.num = num;
+		this.index = 0;
+		this.indicators = [];
+		this.init();
 	}
-	init(){
-		for (var i = 0; i < this.num.length; i++) {
+	init() {
+		for (let i = 0; i < this.num.length; i++) {
 			this.div = document.createElement('div');
 			this.div.style = "width:28%;height:90%;float:left;margin:23px 2.5%;background-color:#fff;";
 			this.div.className = 'current';
@@ -21,9 +21,9 @@ class Shangpin{
 		}
 		this.getStatu();
 	}
-	render(i){
-		var that = this;
-		this.div.onclick = function () {
+	render(i) {
+		let that = this;
+		this.div.onclick = () => {
 			let pid = that.num[i].pid;
 			// let liang=that.num[i].liang;
 			// let price=that.num[i].price;
@@ -108,39 +108,39 @@ class Shangpin{
 			window.location.href = "gouwu.html?shopid=" + pid;
 		}
 	}
-	createImg(i){
-		var img = document.createElement('img');
+	createImg(i) {
+		let img = document.createElement('img');
 		img.style = "width:100%;";
 		img.src = this.num[i].img;
 		this.div.appendChild(img);
 	}
-	createLiang(i){
-		var liang = document.createElement('P');
+	createLiang(i) {
+		let liang = document.createElement('P');
 		liang.style = "font-size:22px;padding-top:15px;padding-left:15px;color:#444850;";
 		liang.innerText = this.num[i].liang;
 		this.div.appendChild(liang);
 	}
-	createPrice(i){
-		var price = document.createElement('p');
+	createPrice(i) {
+		let price = document.createElement('p');
 		price.style = "width:40%;font-size:24px;margin-top:20px;margin-left:15px;float:left;margin-right:0;color:#f18442;";
 		price.innerText = '￥' + this.num[i].price;
 		this.div.appendChild(price);
 	}
-	createGou(i){
-		var aL = document.createElement('a');
-		var gou = document.createElement('img');
+	createGou(i) {
+		let aL = document.createElement('a');
+		let gou = document.createElement('img');
 		gou.style = "width:30%;margin-left:200px;position:relative;float:left;margin-top:-43px;";
 		gou.src = this.num[i].gou;
 		aL.appendChild(gou);
 		this.div.appendChild(aL);
 	}
-	getStatu(){
-		for (var j = 0; j < this.num.length; j++) {
+	getStatu() {
+		for (let j = 0; j < this.num.length; j++) {
 			this.indicators[j].className = '';
 		}
 		this.indicators[this.index].className = 'current';
-		var that = this;
-		for (var z = 0; z < this.indicators.length; z++) {
+		let that = this;
+		for (let z = 0; z < this.indicators.length; z++) {
 			this.indicators[z].onmouseover = function () {
 				animate(this, {
 					marginTop: 10

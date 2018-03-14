@@ -8,10 +8,8 @@ function validate(id, reg) {
 		let errormsg = id.parentNode.children[1];
 		if (reg.test(value)) {
 			errormsg.style.display = "none";
-			res.validate = true;
 		} else {
 			errormsg.style.display = "block";
-			res.validate = false;
 		}
 	}
 }
@@ -20,8 +18,8 @@ validate(pwd, /^\w{6,8}$/);
 function login(e) {
 	e = e || event;
 	e.preventDefault();
-	let phone = phone.value;
-	let pwd = pwd.value;
+	let phone = document.getElementById('phone').value;
+	let pwd = document.getElementById('pwd').value;
 	let data = {
 		phone,
 		pwd

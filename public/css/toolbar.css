@@ -16,63 +16,55 @@ a {
     top: 120px;
     height: 330px;
     z-index: 100; }
-    .rtoolbar ul li .icon, .rtoolbar ul li .icon1 {
-      position: relative;
-      margin-top: 7px;
-      padding-bottom: 7px;
-      text-align: center;
-      display: block;
-      color: #fff;
-      z-index: 100;
-      cursor: pointer;
-      font-size: 12px;
-      line-height: normal; }
-      .rtoolbar ul li .icon a .tab-ico, .rtoolbar ul li .icon1 a .tab-ico {
-        z-index: 100;
-        width: 37px;
-        height: 37px;
-        background-image: url(../imgs/toolbar.png);
-        background-repeat: no-repeat;
-        position: absolute; }
-      .rtoolbar ul li .icon a .tab-text, .rtoolbar ul li .icon1 a .tab-text {
-        width: 78px;
-        height: 37px;
-        left: -78px;
-        font-style: normal;
-        font-weight: 500;
-        display: block;
-        text-align: center;
-        line-height: 37px;
-        position: absolute;
-        overflow: visible;
-        background-color: #484c4f;
-        color: #fff;
-        font-size: 12px;
-        z-index: 101; }
     .rtoolbar ul li .icon {
       width: 36px;
       height: 36px; }
-      .rtoolbar ul li .icon:hover em {
-        color: red;
-        transition: all 0.25s linear 0s;
-        left: -78px;
-        display: block; }
-      .rtoolbar ul li .icon a .member {
-        background-position: -37px -327px; }
-      .rtoolbar ul li .icon a .focus {
-        background-position: -37px -143px; }
-      .rtoolbar ul li .icon a .qrcode {
-        left: 0px;
-        background-position: -112px -463px; }
-        .rtoolbar ul li .icon a .qrcode .qrdesc {
-          background: url(../imgs/qrcode.png) no-repeat;
+      .rtoolbar ul li .icon a {
+        width: 36px;
+        height: 36px; }
+        .rtoolbar ul li .icon a .tab-text {
+          width: 78px;
+          height: 37px;
+          font-style: normal;
+          font-weight: 500;
           display: none;
-          width: 95px;
-          height: 95px; }
-        .rtoolbar ul li .icon a .qrcode:hover .qrdesc {
-          display: block; }
-      .rtoolbar ul li .icon a .tabtop {
-        background-position: -74px -465px; }
+          text-align: center;
+          line-height: 37px;
+          position: absolute;
+          overflow: visible;
+          background-color: #484c4f;
+          color: #fff;
+          font-size: 12px;
+          left: 0;
+          z-index: 101; }
+        .rtoolbar ul li .icon a:hover .tab-text {
+          width: 78px;
+          height: 37px;
+          color: red;
+          transition: all 0.25s linear;
+          left: -78px;
+          display: block;
+          z-index: 9999; }
+        .rtoolbar ul li .icon a .member {
+          background-position: -37px -327px; }
+        .rtoolbar ul li .icon a .focus {
+          background-position: -37px -143px; }
+        .rtoolbar ul li .icon a .qrcode {
+          left: 0px;
+          background-position: -112px -463px; }
+        .rtoolbar ul li .icon a:hover .qrdesc {
+          opacity: 1; }
+        .rtoolbar ul li .icon a .qrdesc {
+          background: url(../imgs/qrcode.png) no-repeat;
+          opacity: 0;
+          position: absolute;
+          overflow: visible;
+          left: -114px;
+          width: 114px;
+          height: 132px;
+          z-index: 9999; }
+        .rtoolbar ul li .icon a .tabtop {
+          background-position: -74px -465px; }
     .rtoolbar ul li .icon1 {
       width: 36px;
       height: 130px;
@@ -102,3 +94,21 @@ a {
         margin: 0 auto;
         border-radius: 50%;
         background-color: #f87762; }
+    .rtoolbar ul li .icon, .rtoolbar ul li .icon1 {
+      position: relative;
+      margin-top: 7px;
+      padding-bottom: 7px;
+      text-align: center;
+      display: block;
+      color: #fff;
+      z-index: 100;
+      cursor: pointer;
+      font-size: 12px;
+      line-height: normal; }
+      .rtoolbar ul li .icon a .tab-ico, .rtoolbar ul li .icon1 a .tab-ico {
+        z-index: 100;
+        width: 37px;
+        height: 37px;
+        background-image: url(../imgs/toolbar.png);
+        background-repeat: no-repeat;
+        position: absolute; }
